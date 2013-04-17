@@ -15,26 +15,20 @@
 #include "DallasTemperature.h"
 #include "OneWire.h"
 #include "stdio.h"
-
-// Digital Pins
+// I/O Pins
 #define LED_PIN 13
 #define OUTLET_PIN 12
 #define INLET_PIN 11
 #define HEAT_PIN 10
 #define FLOW_PIN 9
 #define PUMP_PIN 8
-#define EC_ENABLE_PIN 7
+#define EC_READ_PIN 7 // EC_READ_PIN must be 7, 8, or 9
 #define BASE_PIN 6
 #define ACID_PIN 5
-#define EC_READ_PIN 4
+#define EC_ENABLE_PIN 4 // EC_ENABLE_PIN must be 4, 5, or 6
 #define TEMP_PIN 3 
 #define LEVEL_PIN 2
-#define TX_PIN 1
-#define RX_PIN 0
-
-// Analog Pins
-#define PH_PIN 0
-
+#define PH_PIN 0 // analog 0
 // Constants
 #define GAIN 9.65414
 #define VOLTAGE 5.05 // arduino voltage
@@ -43,7 +37,7 @@
 #define MAX 128
 #define INTERVAL 1000 // standardized delay between readings/adjustments
 #define SAMPLES 4096
-#define BAUD
+#define BAUD 9600
 #define PRECISION 2 // number of decimal places
 #define DIGITS 4 // number of digits
 #define X1 500
@@ -54,7 +48,6 @@
 /* --- Declarations --- */
 OneWire oneWire(TEMP_PIN);
 DallasTemperature temperature(&oneWire);
-SoftwareSerial commands(RX_PIN, TX_PIN); // USB serial to server
 char PH[CHARS];
 char EC[CHARS];
 char TEMP[CHARS];
@@ -84,11 +77,11 @@ void loop() {
 // Collects data and sends it to server.
 void sendDATA() {
   digitalWrite(LED_PIN, HIGH);
-  dtostrf(testPH(),FIGURES,PRECISION,PH);
-  dtostrf(testEC(),FIGURES,PRECISION,EC);
-  dtostrf(testTEMP(),FIGURES,PRECISION,TEMP);
-  dtostrf(testFLOW(),FIGURES,PRECISION,FLOW);
-  dtostrf(testLEVEL(),FIGURES,PRECISION,LEVEL);
+  dtostrf(testPH(),DIGITS,PRECISION,PH);
+  dtostrf(testEC(),DIGITS,PRECISION,EC);
+  dtostrf(testTEMP(),DIGITS,PRECISION,TEMP);
+  dtostrf(testFLOW(),DIGITS,PRECISION,FLOW);
+  dtostrf(testLEVEL(),DIGITS,PRECISION,LEVEL);
   sprintf(DATA, "{'PH':%s,'EC':%s,'TEMP':%s,'FLOW':%s,'LEVEL':%s}",PH,EC,TEMP,FLOW,LEVEL); // concatenate message string
   Serial.println(DATA);
   Serial.flush();
@@ -200,9 +193,11 @@ void cool() {
 
 /* --- Inject --- */
 void inject() {
-  digitalWrite(INJECT_PIN, HIGH);
+  digitalWrite(ACID_PIN, HIGH);
+  digitalWrite(BASE_PIN, HIGH);
   wait();
-  digitalWrite(INJECT_PIN, LOW);
+  digitalWrite(ACID_PIN, LOW);
+  digitalWrite(BASE_PIN, LOW);
 }
 
 /* --- Dilute --- */
@@ -228,7 +223,8 @@ void acid() {
 
 /* --- Standby --- */
 void standby() {
-  digitalWrite(INJECT_PIN, LOW);
+  digitalWrite(BASE_PIN, LOW);
+  digitalWrite(ACID_PIN, LOW);
   digitalWrite(INLET_PIN, HIGH);
   digitalWrite(OUTLET_PIN,HIGH);
 }
