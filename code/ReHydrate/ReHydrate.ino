@@ -67,15 +67,15 @@ void setup() {
 
 /* --- Loop --- */
 void loop() {
-  sendDATA(); // reads sensors, then sends data
+  send_data(); // reads sensors, then sends data
   wait();
-  receiveCOMMAND(); // gets command, then executes actions
+  receive_command(); // gets command, then executes actions
   wait();
 }
 
 /* --- Send Data --- */
 // Collects data and sends it to server.
-void sendDATA() {
+void send_data() {
   digitalWrite(LED_PIN, HIGH);
   dtostrf(testPH(),DIGITS,PRECISION,PH);
   dtostrf(testEC(),DIGITS,PRECISION,EC);
