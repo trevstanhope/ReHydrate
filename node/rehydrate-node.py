@@ -42,9 +42,9 @@ class ReHydrate:
 
     ## Initialize
     def __init__(self, config):
+    
         self.add_log_entry('INIT', 'Setting Configuration')
         self.hostname = socket.gethostname()
-        
         self.add_log_entry('INIT', 'Loading Config File')
         with open(config) as config_file:
             settings = json.loads(config_file.read())
@@ -54,26 +54,41 @@ class ReHydrate:
                 except AttributeError as error:
                     self.add_log_entry('INIT', '%s : %s' % (key, settings[key]))
                     setattr(self, key, settings[key])
-        
+        self.init_arduino()
+        self.init_log()
+        self.init_monitors()
+
+    def init_monitors(self):
         try:
-            self.add_log_entry('INIT', 'Initializing Post')
-            Monitor(cherrypy.engine, self.post_sample, frequency=self.POST_INTERVAL).subscribe()
-        except Exception as error:
-            self.add_log_entry('ERROR', str(error))
-            
-        try:
-            self.add_log_entry('INIT', 'Initializing Arduino')
-            self.arduino = Serial(self.ARDUINO_DEV, self.ARDUINO_BAUD, timeout=self.ARDUINO_TIMEOUT)
-            Monitor(cherrypy.engine, self.read_arduino, frequency=self.ARDUINO_INTERVAL).subscribe()
+            self.add_log_entry('INIT', 'Initializing Monitors')
+            Monitor(cherrypy.engine, self.new_sample, frequency=self.SAMPLE_INTERVAL).subscribe()
         except Exception as error:
             self.add_log_entry('ERROR', str(error))
 
-        
+    def init_arduino(self):
         try:
-            self.add_log_entry('INIT', 'Initializing Log')
-            logging.basicConfig(filename=self.LOG_FILE, level=logging.DEBUG)
+            self.add_log_entry('INIT', 'Initializing Arduino')
+            self.sensor_data = {}
+            self.arduino = Serial(self.ARDUINO_DEV, self.ARDUINO_BAUD, timeout=self.ARDUINO_TIMEOUT)
         except Exception as error:
             self.add_log_entry('ERROR', str(error))
+
+    def init_log(self):
+        try:
+            self.add_log_entry('INIT', 'Initializing Log')
+            self.log_path = '%s/%s' % (self.LOG_DIR, datetime.strftime(datetime.now(), self.LOG_FILE))
+            logging.basicConfig(filename=self.log_path, level=logging.DEBUG)
+        except Exception as error:
+            self.add_log_entry('ERROR', str(error))
+
+    ## Check Data
+    def check_data(self, data):
+        keys = ['EC', 'TEMP', 'N', 'CA', 'K']        
+        for k in keys:
+            if len(data[k]) != 5:
+                self.add_log_entry('ERROR', 'key-values failed check')                
+                return {}
+        return data
 
     ## Read Arduino
     def read_arduino(self):
@@ -81,10 +96,10 @@ class ReHydrate:
         try:
             string = self.arduino.readline()
             result = ast.literal_eval(string)
-            self.sensor_data = result
+            self.sensor_data = self.check_data(result)
         except Exception as error:
             self.add_log_entry('ERROR', str(error))
-            self.sensor_data = '{}'
+            self.sensor_data = {}
  
     ## Post Sample
     def post_sample(self):
@@ -92,16 +107,21 @@ class ReHydrate:
         try:
             sample = {
                 'time' : datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S'),
-                'hostname' : self.hostname,
+                'node' : self.hostname,
                 'data' : self.sensor_data
             }
             dump = json.dumps(sample)
             req = urllib2.Request(self.POST_URL)
             req.add_header('Content-Type','application/json')
             response = urllib2.urlopen(req, dump)
-            print('\tOKAY: %s' % str(response.getcode()))
+            self.add_log_entry('NODE', 'Response %s' % str(response.getcode()))
         except Exception as error:
             self.add_log_entry('ERROR', str(error))
+
+    ## Ping
+    def new_sample(self):
+        self.read_arduino()
+        self.post_sample()
     
     ## Shutdown
     def shutdown(self):
