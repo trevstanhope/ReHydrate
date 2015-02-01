@@ -8,5 +8,6 @@
     "ARDUINO_TIMEOUT" : 3,
     "LOG_FILE" : "%Y-%m-%d.log",
     "LOG_DIR" : "./logs",
-    "SHUTDOWN_CMD" : "sudo reboot"
+    "SHUTDOWN_CMD" : "sudo reboot",
+    "SENSORS" : ["EC", "TEMP", "N", "CA", "K"]
 }
