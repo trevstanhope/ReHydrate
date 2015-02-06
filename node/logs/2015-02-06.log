@@ -918,3 +918,464 @@ INFO:cherrypy.error:[06/Feb/2015:00:29:11] ENGINE Bus STOPPED
 INFO:cherrypy.error:[06/Feb/2015:00:29:11] ENGINE Bus EXITING
 INFO:cherrypy.error:[06/Feb/2015:00:29:11] ENGINE Bus EXITED
 INFO:cherrypy.error:[06/Feb/2015:00:29:11] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:31:27] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:31:27] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:31:27] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:31:27] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:31:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:31:27] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:31:27] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:31:27] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:31:27] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:31:27] ENGINE Bus STARTED
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:44] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:44] "GET /data/samples.json HTTP/1.1" 200 8249 "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:46] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:46] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:47] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:48] "GET /data/samples.json HTTP/1.1" 200 8249 "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:49] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:49] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:50] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:51] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:52] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:52] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:59] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:31:59] "GET /data/samples.json HTTP/1.1" 200 8249 "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:32:01] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:32:01] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:32:28] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.160592524:127.0.0.1 - - [06/Feb/2015:00:32:28] "GET /data/samples.json HTTP/1.1" 200 8249 "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:58] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:32:59] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:33:00] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:33:00] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:33:00] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:33:00] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:33:00] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:00] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:00] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:00] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:00] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:33:00] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:33:11] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:33:25] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:33:25] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:33:25] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:33:25] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:33:25] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:25] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:25] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:25] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:26] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:33:26] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:33:41] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:33:52] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:33:53] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:33:53] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:33:53] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:33:53] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:33:53] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:53] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:53] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:53] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:33:53] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:33:53] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:34:30] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:34:31] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:34:31] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:34:31] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:34:31] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:34:31] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:31] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:31] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:31] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:31] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:34:31] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:34:33] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:34:34] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:34:34] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:34:34] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:34:34] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:34:34] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:34] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:34] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:34] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:34] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:34:34] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:34:45] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:34:47] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:34:47] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:34:47] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:34:47] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:34:47] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:47] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:47] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:47] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:34:48] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:34:48] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:35:23] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:35:54] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:35:54] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:35:54] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:35:54] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:35:54] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:35:54] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:35:54] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:35:54] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:35:54] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:35:54] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:36:17] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:36:22] ENGINE Bus STARTED
+INFO:cherrypy.access.149205644:127.0.0.1 - - [06/Feb/2015:00:36:28] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.149205644:127.0.0.1 - - [06/Feb/2015:00:36:29] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.149205644:127.0.0.1 - - [06/Feb/2015:00:36:29] "GET /data/samples.json HTTP/1.1" 200 9123 "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.149205644:127.0.0.1 - - [06/Feb/2015:00:36:30] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.149205644:127.0.0.1 - - [06/Feb/2015:00:36:30] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.149205644:127.0.0.1 - - [06/Feb/2015:00:36:31] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.149205644:127.0.0.1 - - [06/Feb/2015:00:36:31] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:36:57] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:37:13] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:37:17] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:37:18] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:37:18] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:37:18] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:37:18] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:37:18] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:18] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:18] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:18] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:18] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:37:18] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:37:23] ENGINE Bus STARTED
+INFO:cherrypy.access.178131532:127.0.0.1 - - [06/Feb/2015:00:37:26] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.178131532:127.0.0.1 - - [06/Feb/2015:00:37:26] "GET /data/samples.json HTTP/1.1" 200 10695 "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.178131532:127.0.0.1 - - [06/Feb/2015:00:37:27] "GET / HTTP/1.1" 200 5302 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.178131532:127.0.0.1 - - [06/Feb/2015:00:37:27] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:38:07] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:38:14] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:38:14] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:38:14] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:38:14] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:38:14] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:14] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:14] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:14] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:14] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:38:14] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:38:57] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Restarting because /home/trevor/Public/trevstanhope/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Bus STARTING
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Serving on 0.0.0.0:8083
+INFO:cherrypy.error:[06/Feb/2015:00:39:10] ENGINE Bus STARTED
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE Bus STOPPING
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE Bus STOPPED
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE Bus EXITING
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE Bus EXITED
+INFO:cherrypy.error:[06/Feb/2015:00:39:12] ENGINE Waiting for child threads to terminate...

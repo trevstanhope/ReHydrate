@@ -103,7 +103,15 @@ class ReHydrate:
             return sensor_data
         except Exception as error:
             self.add_log_entry('ARDUINO ERROR', str(error))
-            return {'N' : random.randrange(1024)}
+            return self.random_data() #! WARNING: set to generate random data if no arduino
+    
+    ## Generate Random Data
+    def random_data(self):
+        self.add_log_entry('WARNING', 'Generating Random Data')
+        d = {}
+        for p in self.SENSORS.keys():
+            d[p] = random.randrange(1024)
+        return d
         
     ## Check Data
     def check_data(self, data):
@@ -118,7 +126,7 @@ class ReHydrate:
     ## Convert Units
     def convert_units(self, data):
         try:
-            self.add_log_entry('CONVERT', 'Calculating units')  
+            self.add_log_entry('PROCESSING', 'Calculating units')  
             for p in self.SENSORS.keys():
                 x = data[p]
                 x_min = self.SENSORS[p]['X_MIN']
@@ -172,7 +180,7 @@ class ReHydrate:
             dt = datetime.now() - timedelta(hours=hours) # get datetime
             matches = col.find({'time':{'$gt':dt, '$lt':datetime.now()}})
         except Exception as error:
-            self.add_log_entry('GRAPH ERROR', str(error))
+            self.add_log_entry('GRAPH ERROR 1', str(error))
         try:
             with open('data/samples.json', 'w') as jsonfile:
                 self.add_log_entry('GRAPHS', 'Updating samples.json')
@@ -187,10 +195,10 @@ class ReHydrate:
                             }
                             results.append(point)
                         except Exception as error:
-                            self.add_log_entry('GRAPH ERROR', str(error))
+                            pass
                 jsonfile.write(json.dumps(results, indent=True))
         except Exception as error:
-            self.add_log_entry('GRAPH ERROR', str(error))
+            self.add_log_entry('GRAPH ERROR 3', str(error))
         
     ## New Sample
     def new_sample(self):
