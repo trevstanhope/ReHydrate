@@ -6,7 +6,7 @@
     "SAMPLE_INTERVAL": 5,
     "UPDATE_INTERVAL": 10,
     "POST_URL": "http://127.0.0.1:5000",
-    "ARDUINO_DEV": "/dev/ttyAMC0",
+    "ARDUINO_DEV": "/dev/ttyACM0",
     "ARDUINO_BAUD": 9600,
     "ARDUINO_TIMEOUT" : 3,
     "LOG_FILE" : "%Y-%m-%d.log",
@@ -14,29 +14,34 @@
     "SHUTDOWN_CMD" : "sudo reboot",
     "SENSORS" : {
         "N" : {
-            "Y_MIN" : 0,
-            "X_MIN" : -300,
-            "Y_MAX" : 300,
+            "X_MIN" : 0,
             "X_MAX" : 1024,
-            "Y_OFFSET" : 10,
-            "MV_PER_BIT" : 1
+            "MV_MIN" : -300,
+            "MV_MAX" : 300,
+            "MV_OFF" : 0,
+            "PPM_MIN" : 10,
+            "PPM_MAX" : 300,
+            "PPM_OFF" : 0
         },
         "Ca" : {
-            "Y_MIN" : 0,
-            "X_MIN" : -300,
-            "Y_MAX" : 300,
+            "X_MIN" : 0,
             "X_MAX" : 1024,
-            "Y_OFFSET" : 10,
-            "MV_PER_BIT" : 1
+            "MV_MIN" : -300,
+            "MV_MAX" : 300,
+            "MV_OFF" : 0,
+            "PPM_MIN" : 10,
+            "PPM_MAX" : 300,
+            "PPM_OFF" : 0
         },
         "K" : {
-            "Y_MIN" : 0,
-            "X_MIN" : -300,
-            "Y_MAX" : 300,
+            "X_MIN" : 0,
             "X_MAX" : 1024,
-            "Y_OFFSET" : 10,
-            "MV_PER_BIT" : 1
+            "MV_MIN" : -300,
+            "MV_MAX" : 300,
+            "MV_OFF" : 0,
+            "PPM_MIN" : 10,
+            "PPM_MAX" : 300,
+            "PPM_OFF" : 0
         }  
     }
-    
 }

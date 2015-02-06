@@ -39,7 +39,7 @@ const int PH_SENSOR_PIN = A5;
 const int CHARS = 8;
 const int BUFF_SIZE = 128;
 const int INTERVAL = 1000; // standardized delay between readings/adjustments
-const int SAMPLES = 4096;
+const int SAMPLES = 100;
 const int BAUD = 9600;
 const int PRECISION = 2; // number of decimal places
 const int DIGITS = 6; // number of digits
@@ -142,6 +142,8 @@ void check_queue() {
   if (Serial.available()) {
     char command = Serial.read();
     int set_point = Serial.parseInt();
+//    Serial.println(set_point);
+//    Serial.println(command);
     switch(command) {
       case 'N':
         N_set = set_point;
@@ -180,6 +182,11 @@ void control_pumps() {
   K_pid.Compute();
   pH_pid.Compute();
   EC_pid.Compute();
+//  Serial.println(N_out);
+//  Serial.println(Ca_out);
+//  Serial.println(K_out);
+//  Serial.println(pH_out);
+//  Serial.println(EC_out);
   if (N_out > N_set) {
     digitalWrite(N_PUMP_PIN, HIGH);   // Add Nitrogen Solution  
   }
@@ -210,7 +217,6 @@ void control_pumps() {
   else if (pH_out < pH_set) {
     digitalWrite(HCL_PUMP_PIN, LOW);
   }
-
 }
 
 /* --- Test Temperature --- */

@@ -50,7 +50,6 @@ def index():
         if valid:
             node_id = sample['node']
             collection = db[node_id]
-            check_key=
             doc_id = collection.insert(sample)
             pretty_print('MONGODB', doc_id)
             return '200'
