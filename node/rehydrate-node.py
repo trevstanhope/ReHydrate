@@ -38,11 +38,12 @@ except Exception as err:
 # Node
 class ReHydrate:
 
+    ## Add Log Entry
     def add_log_entry(self, origin, msg):
         date = datetime.strftime(datetime.now(), '%d/%b/%Y:%H:%M:%S')
         print('[%s] %s %s' % (date, origin, msg))
-
-    ## Initialize
+    
+    ## Init
     def __init__(self, config):
         self.add_log_entry('INIT', 'Setting Configuration')
         self.hostname = socket.gethostname()
@@ -61,7 +62,8 @@ class ReHydrate:
         self.init_log()
         self.init_monitors()
         self.init_db()
-        
+     
+    ## Init Monitors   
     def init_monitors(self):
         try:
             self.add_log_entry('CHERRYPY', 'Initializing Monitors')
@@ -69,7 +71,8 @@ class ReHydrate:
             Monitor(cherrypy.engine, self.update_graphs, frequency=self.SAMPLE_INTERVAL).subscribe()
         except Exception as error:
             self.add_log_entry('CHERRYPY', str(error))
-
+    
+    ## Init Arduino
     def init_arduino(self):
         try:
             self.add_log_entry('ARDUINO', 'Initializing Arduino')
@@ -77,7 +80,8 @@ class ReHydrate:
             self.arduino = Serial(self.ARDUINO_DEV, self.ARDUINO_BAUD, timeout=self.ARDUINO_TIMEOUT)
         except Exception as error:
             self.add_log_entry('ARDUINO', str(error))
-
+    
+    ## Init Log
     def init_log(self):
         try:
             self.add_log_entry('LOG', 'Initializing Log')
@@ -86,13 +90,14 @@ class ReHydrate:
         except Exception as error:
             self.add_log_entry('LOG', str(error))
     
+    ## Init DB
     def init_db(self):
         try:
-            self.add_log_entry('DB', 'Initializing Local Database')
+            self.add_log_entry('DATABASE', 'Initializing Local Database')
             self.client = pymongo.MongoClient(self.MONGO_ADDR, self.MONGO_PORT)
         except Exception as error:
-            self.add_log_entry('DB', str(error))
-
+            self.add_log_entry('DATABASE', str(error))
+    
     ## Read Arduino
     def read_arduino(self):
         self.add_log_entry('ARDUINO', 'Reading Arduino')
@@ -112,21 +117,22 @@ class ReHydrate:
         for p in self.SENSORS.keys():
             d[p] = random.randrange(1024)
         return d
-        
-    ## Check Data
+    
+    ## Check data integritys  
     def check_data(self, data):
         for p in self.SENSORS.keys():
             try:
-                data[p]
+                if data[p] < 0 or data[p] > 1024:
+                    del(data[p])
+                    self.add_log_entry('CHECK ERROR', 'invalid range')     
             except Exception as error:
-                self.add_log_entry('CHECK ERROR', 'key-values failed check')                
-                return {}
+                self.add_log_entry('CHECK ERROR', 'Key not exist')                
         return data
     
-    ## Convert Units
-    def convert_units(self, data):
+    ## Calculate mV from serial bits
+    def calculate_millivolts(self, data):
         try:
-            self.add_log_entry('PROCESSING', 'Calculating units')  
+            self.add_log_entry('PROCESSING', 'Calculate mV')  
             for p in self.SENSORS.keys():
                 x = data[p]
                 x_min = self.SENSORS[p]['X_MIN']
@@ -135,13 +141,13 @@ class ReHydrate:
                 y_max = self.SENSORS[p]['Y_MAX']
                 y_offset = self.SENSORS[p]['Y_OFFSET']
                 mv_per_bit = self.SENSORS[p]['MV_PER_BIT']
-                mV = str(x * float(y_max - y_min) / float(x_max - x_min) + float(y_offset))
+                mV = str(round(x * float(y_max - y_min) / float(x_max - x_min) + float(y_offset),1))
                 data['%s_mV' % p] = mV
             return data
         except Exception as error:
             self.add_log_entry('CONVERT ERROR', str(error))  
- 
-    ## Post Sample
+    
+    ## Post sample to server
     def post_sample(self, sensor_data):
         self.add_log_entry('POST', 'Sending Sample to Server')
         try:
@@ -157,8 +163,8 @@ class ReHydrate:
             self.add_log_entry('POST', 'Response %s' % str(response.getcode()))
         except Exception as error:
             self.add_log_entry('POST ERROR', str(error))
-            
-    ## Save Locally
+    
+    ## Store sample to database   
     def store_sample(self, sensor_data):
         self.add_log_entry('STORE', 'Storing sample %s' % str(sensor_data))
         try:
@@ -179,6 +185,7 @@ class ReHydrate:
             col = db['samples']
             dt = datetime.now() - timedelta(hours=hours) # get datetime
             matches = col.find({'time':{'$gt':dt, '$lt':datetime.now()}})
+            self.add_log_entry('DATABASE', 'Queried documents in time frame')
         except Exception as error:
             self.add_log_entry('GRAPH ERROR 1', str(error))
         try:
@@ -202,9 +209,10 @@ class ReHydrate:
         
     ## New Sample
     def new_sample(self):
+        self.add_log_entry('NEW', 'Queried documents in time frame')
         sensor_data = self.read_arduino()
         if self.check_data(sensor_data):
-            proc_data = self.convert_units(sensor_data)
+            proc_data = self.calculate_millivolts(sensor_data)
             self.post_sample(proc_data)
             self.store_sample(proc_data)                    
     

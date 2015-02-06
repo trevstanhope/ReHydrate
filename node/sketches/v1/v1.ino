@@ -8,6 +8,8 @@
   Todo:
   - test sensor functions
   - test response timing
+  - test buffer memory
+  - test set commands
 */
 
 /* --- Headers --- */

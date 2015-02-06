@@ -4,6 +4,7 @@
     "CHERRYPY_PORT": 8083,
     "CHERRYPY_ADDR": "0.0.0.0",
     "SAMPLE_INTERVAL": 5,
+    "UPDATE_INTERVAL": 10,
     "POST_URL": "http://127.0.0.1:5000",
     "ARDUINO_DEV": "/dev/ttyAMC0",
     "ARDUINO_BAUD": 9600,
