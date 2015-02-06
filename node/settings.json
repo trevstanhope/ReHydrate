@@ -1,4 +1,6 @@
 {
+    "MONGO_ADDR" : "127.0.0.1",
+    "MONGO_PORT" : 27017,
     "CHERRYPY_PORT": 8083,
     "CHERRYPY_ADDR": "0.0.0.0",
     "SAMPLE_INTERVAL": 5,
@@ -9,5 +11,14 @@
     "LOG_FILE" : "%Y-%m-%d.log",
     "LOG_DIR" : "./logs",
     "SHUTDOWN_CMD" : "sudo reboot",
-    "SENSORS" : ["EC", "TEMP", "N", "CA", "K"]
+    "SENSORS" : {
+        "N" : {
+            "Y_MIN" : 0,
+            "X_MIN" : 0,
+            "Y_MAX" : 300,
+            "X_MAX" : 1024,
+            "Y_OFFSET" : 0,
+            "MV_PER_BIT" : 1
+        } 
+    }
 }

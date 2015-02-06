@@ -19,13 +19,15 @@ import sys
 import cherrypy
 import numpy as np
 import urllib2
-from datetime import datetime
+from datetime import datetime, timedelta
 from serial import Serial, SerialException
 from ctypes import *
 from cherrypy.process.plugins import Monitor
 from cherrypy import tools
 import logging
 import socket
+import pymongo
+import random
 
 # Constants
 try:
@@ -53,14 +55,18 @@ class ReHydrate:
                 except AttributeError as error:
                     self.add_log_entry('INIT', '%s : %s' % (key, settings[key]))
                     setattr(self, key, settings[key])
+        
+        ## Initializers
         self.init_arduino()
         self.init_log()
         self.init_monitors()
-
+        self.init_db()
+        
     def init_monitors(self):
         try:
             self.add_log_entry('CHERRYPY', 'Initializing Monitors')
             Monitor(cherrypy.engine, self.new_sample, frequency=self.SAMPLE_INTERVAL).subscribe()
+            Monitor(cherrypy.engine, self.update_graphs, frequency=self.SAMPLE_INTERVAL).subscribe()
         except Exception as error:
             self.add_log_entry('CHERRYPY', str(error))
 
@@ -79,14 +85,13 @@ class ReHydrate:
             logging.basicConfig(filename=self.log_path, level=logging.DEBUG)
         except Exception as error:
             self.add_log_entry('LOG', str(error))
-
-    ## Check Data
-    def check_data(self, data):
-        for k in self.SENSORS:
-            if len(data[k]) != 5:
-                self.add_log_entry('ERROR', 'key-values failed check')                
-                return {}
-        return data
+    
+    def init_db(self):
+        try:
+            self.add_log_entry('DB', 'Initializing Local Database')
+            self.client = pymongo.MongoClient(self.MONGO_ADDR, self.MONGO_PORT)
+        except Exception as error:
+            self.add_log_entry('DB', str(error))
 
     ## Read Arduino
     def read_arduino(self):
@@ -94,32 +99,103 @@ class ReHydrate:
         try:
             string = self.arduino.readline()
             result = ast.literal_eval(string)
-            self.sensor_data = self.check_data(result)
+            sensor_data = self.check_data(result)
+            return sensor_data
         except Exception as error:
-            self.add_log_entry('ARDUINO', str(error))
-            self.sensor_data = {}
+            self.add_log_entry('ARDUINO ERROR', str(error))
+            return {'N' : random.randrange(1024)}
+        
+    ## Check Data
+    def check_data(self, data):
+        for p in self.SENSORS.keys():
+            try:
+                data[p]
+            except Exception as error:
+                self.add_log_entry('CHECK ERROR', 'key-values failed check')                
+                return {}
+        return data
+    
+    ## Convert Units
+    def convert_units(self, data):
+        try:
+            self.add_log_entry('CONVERT', 'Calculating units')  
+            for p in self.SENSORS.keys():
+                x_min = self.SENSORS[p]['X_MIN']
+                x_max = self.SENSORS[p]['X_MAX']
+                y_min = self.SENSORS[p]['Y_MIN']
+                y_max = self.SENSORS[p]['Y_MAX']
+                y_offset = self.SENSORS[p]['Y_OFFSET']
+                data['%s_mV' % p] = (y_max - y_min) / (x_max - x_min) + y_offset
+            return data
+        except Exception as error:
+            self.add_log_entry('CONVERT ERROR', str(error))  
  
     ## Post Sample
-    def post_sample(self):
-        self.add_log_entry('REST', 'Sending Sample to Server')
+    def post_sample(self, sensor_data):
+        self.add_log_entry('POST', 'Sending Sample to Server')
         try:
             sample = {
                 'time' : datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S'),
                 'node' : self.hostname,
-                'data' : self.sensor_data
+                'data' : sensor_data
             }
             dump = json.dumps(sample)
             req = urllib2.Request(self.POST_URL)
             req.add_header('Content-Type','application/json')
             response = urllib2.urlopen(req, dump)
-            self.add_log_entry('REST', 'Response %s' % str(response.getcode()))
+            self.add_log_entry('POST', 'Response %s' % str(response.getcode()))
         except Exception as error:
-            self.add_log_entry('REST', str(error))
-
+            self.add_log_entry('POST ERROR', str(error))
+            
+    ## Save Locally
+    def store_sample(self, sensor_data):
+        self.add_log_entry('STORE', 'Storing sample %s' % str(sensor_data))
+        try:
+            date = datetime.strftime(datetime.now(), "%Y%m")
+            db = self.client[date]
+            col = db['samples']
+            sensor_data['time'] = datetime.now() # need to provide a time
+            doc_id = col.insert(sensor_data)
+            self.add_log_entry('STORE', 'Doc ID: %s' % str(doc_id))
+        except Exception as error:
+            self.add_log_entry('STORE ERROR', str(error))
+        
+    ## Update Graphs
+    def update_graphs(self, hours=72):
+        try:
+            date = datetime.strftime(datetime.now(), "%Y%m")
+            db = self.client[date]
+            col = db['samples']
+            dt = datetime.now() - timedelta(hours=hours) # get datetime
+            matches = col.find({'time':{'$gt':dt, '$lt':datetime.now()}})
+        except Exception as error:
+            self.add_log_entry('GRAPH ERROR', str(error))
+        try:
+            with open('data/samples.json', 'w') as jsonfile:
+                self.add_log_entry('GRAPHS', 'Updating samples.json')
+                results = []
+                for sample in matches:
+                    for p in self.SENSORS.keys():
+                        try:
+                            point = {
+                                'time':datetime.strftime(sample['time'], "%Y-%m-%d %H:%M:%S"),
+                                'sensor_id':p,
+                                'mV':sample['%s_mV' % p]
+                            }
+                            results.append(point)
+                        except Exception as error:
+                            self.add_log_entry('GRAPH ERROR', str(error))
+                jsonfile.write(json.dumps(results, indent=True))
+        except Exception as error:
+            self.add_log_entry('GRAPH ERROR', str(error))
+        
     ## New Sample
     def new_sample(self):
-        self.read_arduino()
-        self.post_sample()
+        sensor_data = self.read_arduino()
+        if self.check_data(sensor_data):
+            proc_data = self.convert_units(sensor_data)
+            self.post_sample(proc_data)
+            self.store_sample(proc_data)                    
     
     ## Shutdown
     def shutdown(self):
@@ -145,5 +221,6 @@ if __name__ == '__main__':
     cherrypy.server.socket_port = node.CHERRYPY_PORT
     conf = {
         '/': {'tools.staticdir.on':True, 'tools.staticdir.dir':os.path.join(currdir,'static')},
+        '/data' : {'tools.staticdir.on':True, 'tools.staticdir.dir':os.path.join(currdir,'data')}
     }
     cherrypy.quickstart(node, '/', config=conf)
