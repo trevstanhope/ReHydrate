@@ -120,12 +120,15 @@ class ReHydrate:
         try:
             self.add_log_entry('CONVERT', 'Calculating units')  
             for p in self.SENSORS.keys():
+                x = data[p]
                 x_min = self.SENSORS[p]['X_MIN']
                 x_max = self.SENSORS[p]['X_MAX']
                 y_min = self.SENSORS[p]['Y_MIN']
                 y_max = self.SENSORS[p]['Y_MAX']
                 y_offset = self.SENSORS[p]['Y_OFFSET']
-                data['%s_mV' % p] = (y_max - y_min) / (x_max - x_min) + y_offset
+                mv_per_bit = self.SENSORS[p]['MV_PER_BIT']
+                mV = str(x * float(y_max - y_min) / float(x_max - x_min) + float(y_offset))
+                data['%s_mV' % p] = mV
             return data
         except Exception as error:
             self.add_log_entry('CONVERT ERROR', str(error))  

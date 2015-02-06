@@ -14,10 +14,10 @@
     "SENSORS" : {
         "N" : {
             "Y_MIN" : 0,
-            "X_MIN" : 0,
+            "X_MIN" : -300,
             "Y_MAX" : 300,
             "X_MAX" : 1024,
-            "Y_OFFSET" : 0,
+            "Y_OFFSET" : 10,
             "MV_PER_BIT" : 1
         } 
     }
