@@ -615,3 +615,6 @@ INFO:cherrypy.error:[10/Feb/2015:17:05:04] ENGINE Started monitor thread 'Monito
 INFO:cherrypy.error:[10/Feb/2015:17:05:04] ENGINE Started monitor thread 'Autoreloader'.
 INFO:cherrypy.error:[10/Feb/2015:17:05:04] ENGINE Serving on 0.0.0.0:8083
 INFO:cherrypy.error:[10/Feb/2015:17:05:04] ENGINE Bus STARTED
+INFO:cherrypy.access.177517228:127.0.0.1 - - [10/Feb/2015:17:14:22] "GET / HTTP/1.1" 200 10312 "" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.177517228:127.0.0.1 - - [10/Feb/2015:17:14:22] "GET /data/samples.json HTTP/1.1" 200 17278 "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.access.177517228:127.0.0.1 - - [10/Feb/2015:17:14:22] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
