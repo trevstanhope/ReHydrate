@@ -14,34 +14,22 @@
     "SHUTDOWN_CMD" : "sudo reboot",
     "SENSORS" : {
         "N" : {
-            "X_MIN" : 0,
-            "X_MAX" : 1024,
-            "MV_MIN" : -300,
-            "MV_MAX" : 300,
-            "MV_OFF" : 0,
-            "PPM_MIN" : 10,
-            "PPM_MAX" : 300,
-            "PPM_OFF" : 0
+            "X" : [512, 1024],
+            "Y" : [0, 300],
+            "D" : 1,
+            "UNITS" : "PPM"
         },
         "Ca" : {
-            "X_MIN" : 0,
-            "X_MAX" : 1024,
-            "MV_MIN" : -300,
-            "MV_MAX" : 300,
-            "MV_OFF" : 0,
-            "PPM_MIN" : 10,
-            "PPM_MAX" : 300,
-            "PPM_OFF" : 0
+            "X" : [512, 1024],
+            "Y" : [0, 300],
+            "D" : 1,
+            "UNITS" : "PPM"
         },
         "K" : {
-            "X_MIN" : 0,
-            "X_MAX" : 1024,
-            "MV_MIN" : -300,
-            "MV_MAX" : 300,
-            "MV_OFF" : 0,
-            "PPM_MIN" : 10,
-            "PPM_MAX" : 300,
-            "PPM_OFF" : 0
+            "X" : [512, 1024],
+            "Y" : [0, 300],
+            "D" : 1,
+            "UNITS" : "PPM"
         }  
     }
 }

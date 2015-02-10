@@ -1,3 +1,5 @@
+#include <RunningMedian.h>
+
 /*
   ReHydrate.ino
   Version: 0.13.4
@@ -14,6 +16,7 @@
 
 /* --- Headers --- */
 // Libraries
+#include "RunningMedian.h"
 #include "DallasTemperature.h"
 #include "OneWire.h"
 #include "stdio.h"
@@ -38,6 +41,7 @@ const int PH_SENSOR_PIN = A5;
 // Constants
 const int CHARS = 8;
 const int BUFF_SIZE = 128;
+const int READ_WAIT = 20;
 const int INTERVAL = 1000; // standardized delay between readings/adjustments
 const int SAMPLES = 100;
 const int BAUD = 9600;
@@ -76,6 +80,10 @@ double EC_set, EC_in, EC_out;
 PID EC_pid(&EC_in, &EC_out, &EC_set, EC_P, EC_I, EC_D, DIRECT);
 double pH_set, pH_in, pH_out;
 PID pH_pid(&pH_in, &pH_out, &pH_set, pH_P, pH_I, pH_D, DIRECT);
+
+RunningMedian N_samples = RunningMedian(SAMPLES);
+RunningMedian Ca_samples = RunningMedian(SAMPLES);
+RunningMedian K_samples = RunningMedian(SAMPLES);
 
 /* --- Setup --- */
 void setup() {
@@ -253,9 +261,11 @@ float test_conductivity() {
 float test_nitrogen() {
   long reading = 0; 
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
-    reading += analogRead(N_SENSOR_PIN); 
+    reading = analogRead(N_SENSOR_PIN); 
+    N_samples.add(reading);
+    delay(READ_WAIT);
   } 
-  float val = reading / SAMPLES;
+  float val = N_samples.getMedian();
   N_in = double(val); // #! Side effect
   return val;
 }
@@ -264,9 +274,10 @@ float test_nitrogen() {
 float test_calcium() {
   long reading = 0; 
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
-    reading += analogRead(CA_SENSOR_PIN); 
+    reading = analogRead(CA_SENSOR_PIN); 
+    Ca_samples.add(reading);
   } 
-  float val = reading / SAMPLES;
+  float val = Ca_samples.getMedian();
   Ca_in = double(val); // #! Side effect
   return val;
 }

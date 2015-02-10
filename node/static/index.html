@@ -12,10 +12,10 @@
                 var xLabel = "Date / Time";
                 var xParam = "time";
                 var timeFormat = "%Y-%m-%d %H:%M:%S";
-                var yLabel = "mV";
-                var yParam = "mV";
-                var yMin = -500;
-                var yMax = 500;
+                var yLabel = "Bits";
+                var yParam = "reading";
+                var yMin = 0;
+                var yMax = 1000;
                 var margin = {top: 10, right: 40, bottom: 50, left: 40},
                     width = $(window).width() - margin.left - margin.right,
                     height = $(window).height() - margin.top - margin.bottom;
@@ -120,7 +120,7 @@
                 var yLabel = "PPM";
                 var yParam = "PPM";
                 var yMin = 0;
-                var yMax = 1000;
+                var yMax = 500;
                 var margin = {top: 10, right: 40, bottom: 50, left: 40},
                     width = $(window).width() - margin.left - margin.right,
                     height = $(window).height() - margin.top - margin.bottom;

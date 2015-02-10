@@ -129,37 +129,20 @@ class ReHydrate:
                 self.add_log_entry('CHECK ERROR', 'Key not exist')                
         return data
     
-    ## Calculate mV from serial bits
-    ## DOES NOT MAKE SENSE BECAUSE bits --> mV is static
-    def calculate_millivolts(self, data):
-        try:
-            self.add_log_entry('PROCESSING', 'Calculate mV')  
-            for p in self.SENSORS.keys():
-                x = data[p]
-                x_min = self.SENSORS[p]['X_MIN']
-                x_max = self.SENSORS[p]['X_MAX']
-                y_min = self.SENSORS[p]['MV_MIN']
-                y_max = self.SENSORS[p]['MV_MAX']
-                y_off = self.SENSORS[p]['MV_OFF']
-                mV = str(round(x * float(y_max - y_min) / float(x_max - x_min) + float(y_off),1))
-                data['%s_mV' % p] = mV
-            return data
-        except Exception as error:
-            self.add_log_entry('CONVERT ERROR', str(error))
-    
-    ## Calculate mV from serial bits
+    ## Calculate PPM from serial bits
+    #! Change to any units
     def calculate_ppm(self, data):
         try:
             self.add_log_entry('PROCESSING', 'Calculate PPM')  
             for p in self.SENSORS.keys():
-                x = data[p]
-                x_min = self.SENSORS[p]['X_MIN']
-                x_max = self.SENSORS[p]['X_MAX']
-                y_min = self.SENSORS[p]['PPM_MIN']
-                y_max = self.SENSORS[p]['PPM_MAX']
-                y_off = self.SENSORS[p]['PPM_OFF']
-                PPM = str(round(x * float(y_max - y_min) / float(x_max - x_min) + float(y_off),1))
-                data['%s_PPM' % p] = PPM
+                x_in = data[p]
+                units = self.SENSORS[p]['UNITS']
+                x = np.array(self.SENSORS[p]['X'])
+                y = np.array(self.SENSORS[p]['Y'])
+                d = np.array(self.SENSORS[p]['D'])
+                z = np.polyfit(x, y, d) # the polynomial fit
+                y_out = np.polyval(z, x_in)
+                data['%s_%s' % (p, units)] = y_out
             return data
         except Exception as error:
             self.add_log_entry('CONVERT ERROR', str(error))
@@ -212,11 +195,12 @@ class ReHydrate:
                 for sample in matches:
                     for p in self.SENSORS.keys():
                         try:
+                            units = self.SENSORS[p]['UNITS']
                             point = {
-                                'time':datetime.strftime(sample['time'], "%Y-%m-%d %H:%M:%S"),
-                                'sensor_id':p,
-                                'mV':sample['%s_mV' % p],
-                                'PPM':sample['%s_PPM' % p]
+                                'time': datetime.strftime(sample['time'], "%Y-%m-%d %H:%M:%S"),
+                                'sensor_id' : p,
+                                'reading' : sample[p],
+                                units : sample['%s_%s' % (p, units)]
                             }
                             results.append(point)
                         except Exception as error:
@@ -230,9 +214,7 @@ class ReHydrate:
         self.add_log_entry('NEW', 'Queried documents in time frame')
         sensor_data = self.read_arduino()
         if self.check_data(sensor_data):
-            PPM_data = self.calculate_ppm(sensor_data)
-            mV_data = self.calculate_millivolts(sensor_data)
-            proc_data = dict(PPM_data.items() + mV_data.items())
+            proc_data = self.calculate_ppm(sensor_data)
             self.post_sample(proc_data)
             self.store_sample(proc_data)                    
     

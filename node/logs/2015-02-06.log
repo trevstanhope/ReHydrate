@@ -965,3 +965,14 @@ INFO:cherrypy.access.151127532:127.0.0.1 - - [06/Feb/2015:16:33:26] "GET / HTTP/
 INFO:cherrypy.access.151127532:127.0.0.1 - - [06/Feb/2015:16:33:26] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
 INFO:cherrypy.access.151127532:127.0.0.1 - - [06/Feb/2015:16:33:26] "GET /data/samples.json HTTP/1.1" 200 462725 "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
 INFO:cherrypy.access.151127532:127.0.0.1 - - [06/Feb/2015:16:33:26] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8083/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE Caught signal SIGTERM.
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE Bus STOPPING
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8083)) shut down
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE Bus STOPPED
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE Bus EXITING
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE Bus EXITED
+INFO:cherrypy.error:[08/Feb/2015:19:58:13] ENGINE Waiting for child threads to terminate...
