@@ -108,7 +108,7 @@ class ReHydrate:
             return sensor_data
         except Exception as error:
             self.add_log_entry('ARDUINO ERROR', str(error))
-            return self.random_data() #! WARNING: set to generate random data if no arduino
+            return {} #! WARNING: set to generate random data if no arduino
     
     ## Generate Random Data
     def random_data(self):
@@ -126,7 +126,7 @@ class ReHydrate:
                     del(data[p])
                     self.add_log_entry('CHECK ERROR', 'invalid range')     
             except Exception as error:
-                self.add_log_entry('CHECK ERROR', 'Key not exist')                
+                self.add_log_entry('CHECK ERROR', 'Key does not exist')                
         return data
     
     ## Calculate PPM from serial bits
