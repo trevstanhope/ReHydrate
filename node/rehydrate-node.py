@@ -146,6 +146,19 @@ class ReHydrate:
             return data
         except Exception as error:
             self.add_log_entry('CONVERT ERROR', str(error))
+
+    ## Calculate mV from serial bits
+    def calculate_millivolt(self, data):
+        try:
+            self.add_log_entry('PROCESSING', 'Calculate mV')  
+            for p in self.SENSORS.keys():
+                x_in = data[p]
+                y_out = self.MV_PER_BIT * (x_in - self.BIT_AT_ZERO)
+                data['%s_mV' % p] = y_out
+            return data
+        except Exception as error:
+            self.add_log_entry('CONVERT ERROR', str(error))
+
     
     ## Post sample to server
     def post_sample(self, sensor_data):
@@ -200,6 +213,7 @@ class ReHydrate:
                                 'time': datetime.strftime(sample['time'], "%Y-%m-%d %H:%M:%S"),
                                 'sensor_id' : p,
                                 'reading' : sample[p],
+                                'mV' : sample['%s_mV' % p],
                                 units : sample['%s_%s' % (p, units)]
                             }
                             results.append(point)
@@ -214,7 +228,9 @@ class ReHydrate:
         self.add_log_entry('NEW', 'Queried documents in time frame')
         sensor_data = self.read_arduino()
         if self.check_data(sensor_data):
-            proc_data = self.calculate_ppm(sensor_data)
+            ppm_data = self.calculate_ppm(sensor_data)
+            millivolt_data = self.calculate_millivolt(sensor_data)
+            proc_data = dict(ppm_data.items() + millivolt_data.items())
             self.post_sample(proc_data)
             self.store_sample(proc_data)                    
     

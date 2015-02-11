@@ -12,6 +12,8 @@
     "LOG_FILE" : "%Y-%m-%d.log",
     "LOG_DIR" : "./logs",
     "SHUTDOWN_CMD" : "sudo reboot",
+    "MV_PER_BIT" : 0.97,
+    "BIT_AT_ZERO" : 509,
     "SENSORS" : {
         "N" : {
             "X" : [512, 1024],
