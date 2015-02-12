@@ -252,7 +252,7 @@ float test_conductivity() {
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading += analogRead(EC_SENSOR_PIN); 
   } 
-  float val = reading / SAMPLES;
+  float val = 0; // reading / SAMPLES;
   EC_in = double(val); // #! Side effect
   return val;
 }

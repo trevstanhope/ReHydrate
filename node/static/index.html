@@ -69,7 +69,7 @@
                         .data(data)
                         .enter().append("circle")
                         .attr("class", "dot")
-                        .attr("r", 4.0)
+                        .attr("r", 3.0)
                         .attr("cx", function(d) { return x(d[xParam]); })
                         .attr("cy", function(d) {
                             if (isNaN(d[yParam])) {
@@ -84,7 +84,7 @@
                             tooltip.transition()
                                 .duration(200)
                                 .style("opacity", .9);
-                            tooltip.html(d[xParam])
+                            tooltip.html(d[yParam])
                                 .style("left", (d3.event.pageX + 5) + "px")
                                 .style("top", (d3.event.pageY - 28) + "px");
                         })
@@ -174,7 +174,7 @@
                         .data(data)
                         .enter().append("circle")
                         .attr("class", "dot")
-                        .attr("r", 4.0)
+                        .attr("r", 3.0)
                         .attr("cx", function(d) { return x(d[xParam]); })
                         .attr("cy", function(d) {
                             if (isNaN(d[yParam])) {
@@ -189,7 +189,7 @@
                             tooltip.transition()
                                 .duration(200)
                                 .style("opacity", .9);
-                            tooltip.html(d[xParam])
+                            tooltip.html(d[yParam])
                                 .style("left", (d3.event.pageX + 5) + "px")
                                 .style("top", (d3.event.pageY - 28) + "px");
                         })
@@ -279,7 +279,7 @@
                         .data(data)
                         .enter().append("circle")
                         .attr("class", "dot")
-                        .attr("r", 4.0)
+                        .attr("r", 3.0)
                         .attr("cx", function(d) { return x(d[xParam]); })
                         .attr("cy", function(d) {
                             if (isNaN(d[yParam])) {
@@ -294,7 +294,7 @@
                             tooltip.transition()
                                 .duration(200)
                                 .style("opacity", .9);
-                            tooltip.html(d[xParam])
+                            tooltip.html(d[yParam])
                                 .style("left", (d3.event.pageX + 5) + "px")
                                 .style("top", (d3.event.pageY - 28) + "px");
                         })

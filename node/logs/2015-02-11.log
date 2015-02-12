@@ -545,3 +545,56 @@ INFO:cherrypy.error:[11/Feb/2015:15:36:34] ENGINE Bus STOPPED
 INFO:cherrypy.error:[11/Feb/2015:15:36:34] ENGINE Bus EXITING
 INFO:cherrypy.error:[11/Feb/2015:15:36:34] ENGINE Bus EXITED
 INFO:cherrypy.error:[11/Feb/2015:15:36:34] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[11/Feb/2015:15:55:34] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[11/Feb/2015:15:55:34] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[11/Feb/2015:15:55:34] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[11/Feb/2015:15:55:34] ENGINE Bus STARTING
+INFO:cherrypy.error:[11/Feb/2015:15:55:34] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[11/Feb/2015:15:55:34] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[11/Feb/2015:15:55:34] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[11/Feb/2015:15:55:34] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[11/Feb/2015:15:55:35] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[11/Feb/2015:15:55:35] ENGINE Bus STARTED
+INFO:cherrypy.access.155715788:188.138.17.205 - - [12/Feb/2015:02:59:44] "GET / HTTP/1.1" 200 15330 "" ""
+INFO:cherrypy.access.155715788:218.59.238.92 - - [12/Feb/2015:06:42:20] "GET /az.php HTTP/1.0" 404 1170 "" "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
+INFO:cherrypy.access.155715788:218.59.238.92 - - [12/Feb/2015:10:06:04] "GET /az.php HTTP/1.0" 404 1170 "" "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
+ERROR:cherrypy.error:[12/Feb/2015:10:06:07] ENGINE TypeError("argument of type 'NoneType' is not iterable",)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/cherrypy/wsgiserver/wsgiserver2.py", line 1292, in communicate
+    req.parse_request()
+  File "/usr/lib/python2.7/dist-packages/cherrypy/wsgiserver/wsgiserver2.py", line 580, in parse_request
+    success = self.read_request_line()
+  File "/usr/lib/python2.7/dist-packages/cherrypy/wsgiserver/wsgiserver2.py", line 644, in read_request_line
+    if NUMBER_SIGN in path:
+TypeError: argument of type 'NoneType' is not iterable
+
+INFO:cherrypy.access.155715788:218.59.238.92 - - [12/Feb/2015:10:07:21] "GET / HTTP/1.0" 200 15330 "" "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
+INFO:cherrypy.access.155715788:218.59.238.92 - - [12/Feb/2015:10:13:37] "GET /azenv.php HTTP/1.0" 404 1176 "" "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
+ERROR:cherrypy.error:[12/Feb/2015:10:13:39] ENGINE TypeError("argument of type 'NoneType' is not iterable",)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/cherrypy/wsgiserver/wsgiserver2.py", line 1292, in communicate
+    req.parse_request()
+  File "/usr/lib/python2.7/dist-packages/cherrypy/wsgiserver/wsgiserver2.py", line 580, in parse_request
+    success = self.read_request_line()
+  File "/usr/lib/python2.7/dist-packages/cherrypy/wsgiserver/wsgiserver2.py", line 644, in read_request_line
+    if NUMBER_SIGN in path:
+TypeError: argument of type 'NoneType' is not iterable
+
+INFO:cherrypy.access.155715788:127.0.0.1 - - [12/Feb/2015:12:07:09] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.155715788:127.0.0.1 - - [12/Feb/2015:12:07:09] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.155715788:127.0.0.1 - - [12/Feb/2015:12:07:09] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.155715788:127.0.0.1 - - [12/Feb/2015:12:07:09] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.155715788:127.0.0.1 - - [12/Feb/2015:12:07:09] "GET /data/samples.json HTTP/1.1" 200 5382298 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.155715788:127.0.0.1 - - [12/Feb/2015:12:07:17] "GET /data/samples.json HTTP/1.1" 200 5383124 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.155715788:127.0.0.1 - - [12/Feb/2015:12:07:32] "GET /data/samples.json HTTP/1.1" 206 3352327 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:12:08:20] ENGINE Waiting for child threads to terminate...

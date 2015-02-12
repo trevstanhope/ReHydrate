@@ -13,7 +13,11 @@
     "LOG_DIR" : "./logs",
     "SHUTDOWN_CMD" : "sudo reboot",
     "MV_PER_BIT" : 0.97,
+    "MV_OFFSET" : 6,
     "BIT_AT_ZERO" : 509,
+    "GRAPH_RANGE" : 6,
+    "MV_PRECISION" : 0,
+    "PPM_PRECISION" : 1,
     "SENSORS" : {
         "N" : {
             "X" : [512, 1024],

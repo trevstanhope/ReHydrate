@@ -1,0 +1,685 @@
+INFO:cherrypy.error:[12/Feb/2015:12:10:00] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:12:10:00] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:12:10:00] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:12:10:00] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:12:10:00] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:10:00] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:10:00] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:12:10:00] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:10:00] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:12:10:00] ENGINE Bus STARTED
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:04] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:04] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:04] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:04] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:04] "GET /data/samples.json HTTP/1.1" 404 1192 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:05] "GET /data/samples.json HTTP/1.1" 200 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:05] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:07] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:07] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:07] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:07] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:07] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:07] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:07] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:09] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:09] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:09] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:09] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:09] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:09] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:09] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:10] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:10] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:10] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:10] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:10] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:10] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:10] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:11] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:11] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:11] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:11] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:11] "GET /data/samples.json HTTP/1.1" 200 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:11] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:11] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:17] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:17] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:17] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:17] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:18] "GET /data/samples.json HTTP/1.1" 200 1581416 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:20] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.146430252:127.0.0.1 - - [12/Feb/2015:12:10:24] "GET /data/samples.json HTTP/1.1" 200 1581405 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:12:11:10] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:12:11:24] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:12:11:24] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:12:11:24] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:12:11:24] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:12:11:24] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:11:24] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:11:24] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:12:11:24] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:11:24] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:12:11:24] ENGINE Bus STARTED
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:34] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:34] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:34] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:34] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:34] "GET /data/samples.json HTTP/1.1" 200 2 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:34] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:34] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:39] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:40] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:40] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:40] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:40] "GET /data/samples.json HTTP/1.1" 200 414 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:40] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:40] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:46] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:46] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:46] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:46] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:46] "GET /data/samples.json HTTP/1.1" 200 827 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:46] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:47] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:58] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:58] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:58] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:58] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:59] "GET /data/samples.json HTTP/1.1" 200 1653 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:59] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:11:59] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:04] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:04] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:04] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:04] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:04] "GET /data/samples.json HTTP/1.1" 200 2066 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:04] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:04] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:09] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:09] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:09] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:09] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:10] "GET /data/samples.json HTTP/1.1" 200 2892 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:10] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:10] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:15] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:15] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:15] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:15] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:15] "GET /data/samples.json HTTP/1.1" 200 3304 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:15] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:12:15] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:15:06] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:15:06] "GET /data/samples.json HTTP/1.1" 200 15619 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:15:06] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:15:06] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:17:28] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:17:28] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:17:28] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:17:28] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:17:28] "GET /data/samples.json HTTP/1.1" 200 25535 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:17:28] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:17:28] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:18:46] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:18:46] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:18:46] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:18:46] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:18:46] "GET /data/samples.json HTTP/1.1" 200 31467 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:18:46] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:18:47] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:54] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:54] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:54] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:54] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:54] "GET /data/samples.json HTTP/1.1" 200 35814 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:54] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:54] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:56] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:56] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:56] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:56] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:56] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:56] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:56] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:58] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:58] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:58] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:58] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:58] "GET /data/samples.json HTTP/1.1" 200 36215 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:58] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:19:58] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:07] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:07] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:07] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:07] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:07] "GET /data/samples.json HTTP/1.1" 200 36993 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:07] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:07] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:08] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:08] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:08] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:08] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:08] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:09] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:09] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:10] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:10] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:10] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:10] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:10] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:10] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:10] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:43] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:43] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:43] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:43] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:43] "GET /data/samples.json HTTP/1.1" 200 2 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:43] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:43] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:44] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:44] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:44] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:44] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:44] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:44] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:44] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:47] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:47] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:47] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:47] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:47] "GET /data/samples.json HTTP/1.1" 200 390 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:47] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:47] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:49] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:49] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:49] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:49] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:50] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:50] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:50] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:52] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:52] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:52] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:52] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:52] "GET /data/samples.json HTTP/1.1" 200 779 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:52] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:52] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:56] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:56] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:56] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:56] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:56] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:56] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:56] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:57] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:57] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:57] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:57] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:57] "GET /data/samples.json HTTP/1.1" 200 1168 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:57] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:57] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:59] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:59] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:59] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:59] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:59] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:59] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:20:59] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:05] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:05] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:05] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:05] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:05] "GET /data/samples.json HTTP/1.1" 200 1556 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:05] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:05] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:07] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:07] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:07] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:07] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:07] "GET /data/samples.json HTTP/1.1" 200 1945 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:08] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:08] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:12] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:12] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:12] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:12] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:13] "GET /data/samples.json HTTP/1.1" 200 2334 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:13] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:13] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:27] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:27] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:27] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:27] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:27] "GET /data/samples.json HTTP/1.1" 200 3112 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:27] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:21:27] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:36:41] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:36:41] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:36:41] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:36:41] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:36:41] "GET /data/samples.json HTTP/1.1" 200 66434 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:36:41] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:36:41] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:53:29] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:53:29] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:53:29] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:53:29] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:53:29] "GET /data/samples.json HTTP/1.1" 200 135979 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:53:29] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.143132972:127.0.0.1 - - [12/Feb/2015:12:53:29] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:12:58:02] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:12:58:43] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:12:58:44] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:12:58:44] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:12:58:44] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:12:58:44] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:12:58:44] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:44] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:44] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:44] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:12:58:44] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:12:58:44] ENGINE Bus STARTED
+ERROR:cherrypy.error:[12/Feb/2015:12:58:49] ENGINE Error in background task thread function <bound method ReHydrate.new_sample of <__main__.ReHydrate instance at 0x885006c>>.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/cherrypy/process/plugins.py", line 475, in run
+    self.function(*self.args, **self.kwargs)
+  File "rehydrate-node.py", line 234, in new_sample
+    proc_data = dict(ppm_data.items() + millivolt_data.items())
+AttributeError: 'NoneType' object has no attribute 'items'
+
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:12:59:10] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:12:59:11] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:12:59:11] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:12:59:11] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:12:59:11] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:12:59:11] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:59:11] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:59:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:12:59:11] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:12:59:11] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:12:59:11] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:01:36] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:13:01:37] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:01:37] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:01:37] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:01:37] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:01:37] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:01:37] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:01:37] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:01:37] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:01:37] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:01:37] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:02:21] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:13:02:22] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:02:22] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:02:22] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:02:22] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:02:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:22] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:22] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:22] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:22] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:02:22] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:02:27] ENGINE Bus STARTED
+ERROR:cherrypy.error:[12/Feb/2015:13:02:32] ENGINE Error in background task thread function <bound method ReHydrate.new_sample of <__main__.ReHydrate instance at 0x9e6306c>>.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/cherrypy/process/plugins.py", line 475, in run
+    self.function(*self.args, **self.kwargs)
+  File "rehydrate-node.py", line 234, in new_sample
+    proc_data = dict(ppm_data.items() + millivolt_data.items())
+AttributeError: 'NoneType' object has no attribute 'items'
+
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:36] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:37] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:02:37] ENGINE Bus STARTED
+ERROR:cherrypy.error:[12/Feb/2015:13:02:42] ENGINE Error in background task thread function <bound method ReHydrate.new_sample of <__main__.ReHydrate instance at 0x96ab06c>>.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/cherrypy/process/plugins.py", line 475, in run
+    self.function(*self.args, **self.kwargs)
+  File "rehydrate-node.py", line 234, in new_sample
+    proc_data = dict(ppm_data.items() + millivolt_data.items())
+AttributeError: 'NoneType' object has no attribute 'items'
+
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:02:57] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:02:58] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:02:58] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:02:58] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:02:58] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:02:58] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:58] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:58] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:58] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:02:58] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:02:58] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:13:03:23] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:13:03:23] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:03:23] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:03:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:03:23] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:03:23] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:03:23] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:03:23] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:03:23] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:03:23] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:03:24] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:05:03] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:05] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:06] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:05:06] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:05:27] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:31] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:05:32] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:05:32] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Restarting because /home/trevor/Public/rehydrate/node/rehydrate-node.py changed.
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:06:04] ENGINE Re-spawning rehydrate-node.py
+INFO:cherrypy.error:[12/Feb/2015:13:06:18] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:06:18] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:06:18] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:06:18] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:06:18] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:06:18] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:06:18] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:06:18] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:06:18] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:06:18] ENGINE Bus STARTED
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE Keyboard Interrupt: shutting down bus
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE Bus STOPPING
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer((u'0.0.0.0', 8080)) shut down
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE Stopped thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE Stopped thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE Stopped thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE Bus STOPPED
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE Bus EXITING
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE Bus EXITED
+INFO:cherrypy.error:[12/Feb/2015:13:07:17] ENGINE Waiting for child threads to terminate...
+INFO:cherrypy.error:[12/Feb/2015:13:07:24] ENGINE Listening for SIGHUP.
+INFO:cherrypy.error:[12/Feb/2015:13:07:24] ENGINE Listening for SIGTERM.
+INFO:cherrypy.error:[12/Feb/2015:13:07:24] ENGINE Listening for SIGUSR1.
+INFO:cherrypy.error:[12/Feb/2015:13:07:24] ENGINE Bus STARTING
+INFO:cherrypy.error:[12/Feb/2015:13:07:24] ENGINE Started monitor thread '_TimeoutMonitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:07:24] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:07:24] ENGINE Started monitor thread 'Monitor'.
+INFO:cherrypy.error:[12/Feb/2015:13:07:24] ENGINE Started monitor thread 'Autoreloader'.
+INFO:cherrypy.error:[12/Feb/2015:13:07:24] ENGINE Serving on 0.0.0.0:8080
+INFO:cherrypy.error:[12/Feb/2015:13:07:24] ENGINE Bus STARTED
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:08:50] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:08:50] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:08:50] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:08:50] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:08:50] "GET /data/samples.json HTTP/1.1" 200 17066 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:08:50] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:08:50] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:12] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:12] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:12] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:12] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:12] "GET /data/samples.json HTTP/1.1" 200 2 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:12] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:12] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:15] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:15] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:15] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:15] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:15] "GET /data/samples.json HTTP/1.1" 200 342 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:15] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:15] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:17] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:17] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:17] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:17] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:18] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:18] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:18] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:18] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:18] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:18] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:18] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:18] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:18] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:18] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:21] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:21] "GET /graph.css HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:21] "GET /jquery-1.10.2.min.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:21] "GET /d3.v3.js HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:21] "GET /data/samples.json HTTP/1.1" 200 683 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:21] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:21] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:49] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:49] "GET /data/samples.json HTTP/1.1" 200 2048 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:49] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:49] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:51] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:51] "GET /data/samples.json HTTP/1.1" 200 2389 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:52] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:52] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:54] "GET / HTTP/1.1" 200 15330 "" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:54] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:54] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"
+INFO:cherrypy.access.173865388:127.0.0.1 - - [12/Feb/2015:13:09:54] "GET /data/samples.json HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Linux i686; rv:31.0) Gecko/20100101 Firefox/31.0 Iceweasel/31.4.0"

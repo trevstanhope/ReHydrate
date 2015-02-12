@@ -142,7 +142,7 @@ class ReHydrate:
                 d = np.array(self.SENSORS[p]['D'])
                 z = np.polyfit(x, y, d) # the polynomial fit
                 y_out = np.polyval(z, x_in)
-                data['%s_%s' % (p, units)] = y_out
+                data['%s_%s' % (p, units)] = round(y_out, self.PPM_PRECISION)
             return data
         except Exception as error:
             self.add_log_entry('CONVERT ERROR', str(error))
@@ -153,8 +153,8 @@ class ReHydrate:
             self.add_log_entry('PROCESSING', 'Calculate mV')  
             for p in self.SENSORS.keys():
                 x_in = data[p]
-                y_out = self.MV_PER_BIT * (x_in - self.BIT_AT_ZERO)
-                data['%s_mV' % p] = y_out
+                y_out = self.MV_PER_BIT * (x_in - self.BIT_AT_ZERO) - self.MV_OFFSET
+                data['%s_mV' % p] = round(y_out, self.MV_PRECISION)
             return data
         except Exception as error:
             self.add_log_entry('CONVERT ERROR', str(error))
@@ -179,7 +179,7 @@ class ReHydrate:
     
     ## Store sample to database   
     def store_sample(self, sensor_data):
-        self.add_log_entry('STORE', 'Storing sample %s' % str(sensor_data))
+        self.add_log_entry('STORE', 'Storing sample\n%s' % json.dumps(sensor_data, sort_keys=True, indent=4))
         try:
             date = datetime.strftime(datetime.now(), "%Y%m")
             db = self.client[date]
@@ -191,8 +191,9 @@ class ReHydrate:
             self.add_log_entry('STORE ERROR', str(error))
         
     ## Update Graphs
-    def update_graphs(self, hours=72):
+    def update_graphs(self):
         try:
+            hours = self.GRAPH_RANGE
             date = datetime.strftime(datetime.now(), "%Y%m")
             db = self.client[date]
             col = db['samples']
