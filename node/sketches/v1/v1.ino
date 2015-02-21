@@ -42,7 +42,7 @@ const int PH_SENSOR_PIN = A5;
 const int CHARS = 8;
 const int BUFF_SIZE = 128;
 const int READ_WAIT = 20;
-const int INTERVAL = 1000; // standardized delay between readings/adjustments
+const int INTERVAL = 5000; // standardized delay between readings/adjustments
 const int SAMPLES = 20;
 const int BAUD = 9600;
 const int PRECISION = 2; // number of decimal places
@@ -252,7 +252,7 @@ float test_conductivity() {
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading += analogRead(EC_SENSOR_PIN); 
   } 
-  float val = reading / SAMPLES;
+  float val = 0; // reading / SAMPLES;
   EC_in = double(val); // #! Side effect
   return val;
 }
