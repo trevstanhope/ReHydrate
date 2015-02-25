@@ -1,11 +1,9 @@
-#include <RunningMedian.h>
-
 /*
-  ReHydrate.ino
-  Version: 0.13.4
-  License: Creative Commons 2013, Trevor Stanhope
-  Updated: 2015-01-31
-  Summary: Control system for a recirculating hydroponic system.
+  ReHydrateBangB.ino
+  Version: 0.15.2
+  License: Creative Commons 2015, Trevor Stanhope
+  
+  Control system for a recirculating hydroponic system.
   
   Todo:
   - test sensor functions
@@ -14,8 +12,7 @@
   - test set commands
 */
 
-/* --- Headers --- */
-// Libraries
+/* --- Libraries --- */
 #include "RunningMedian.h"
 #include "DallasTemperature.h"
 #include "OneWire.h"
@@ -23,6 +20,8 @@
 #include "PID_v1.h"
 
 /* --- Constants --- */
+const boolean VERBOSE = true;
+
 // I/O Pins
 const int N_PUMP_PIN = 2;
 const int CA_PUMP_PIN = 3;
@@ -54,11 +53,11 @@ const int N_DEFAULT = 512; // raw bit value at ideal N
 const int K_DEFAULT = 512; // raw bit value at ideal K
 
 // PID Values
-float N_P = 0.1, N_I = 0.0, N_D = 0.0;
-float Ca_P = 0.1, Ca_I = 0.0, Ca_D = 0.0;
-float K_P = 0.1, K_I = 0.0, K_D = 0.0;
-float EC_P = 0.1, EC_I = 0.0, EC_D = 0.0;
-float pH_P = 0.1, pH_I = 0.0, pH_D = 0.0;
+float N_P = 1.0, N_I = 0.0, N_D = 0.0;
+float Ca_P = 1.0, Ca_I = 0.0, Ca_D = 0.0;
+float K_P = 1.0, K_I = 0.0, K_D = 0.0;
+float EC_P = 1.0, EC_I = 0.0, EC_D = 0.0;
+float pH_P = 1.0, pH_I = 0.0, pH_D = 0.0;
 
 /* --- Variables --- */
 OneWire oneWire(TEMP_SENSOR_PIN);
@@ -71,16 +70,10 @@ char K[CHARS];
 char temp[CHARS];
 char output_buffer[BUFF_SIZE];
 double N_set, N_in, N_out;
-PID N_pid(&N_in, &N_out, &N_set, N_P, N_I, N_D, DIRECT);
 double Ca_set, Ca_in, Ca_out;
-PID Ca_pid(&Ca_in, &Ca_out, &Ca_set, Ca_P, Ca_I, Ca_D, DIRECT);
 double K_set, K_in, K_out;
-PID K_pid(&K_in, &K_out, &K_set, K_P, K_I, K_D, DIRECT);
 double EC_set, EC_in, EC_out;
-PID EC_pid(&EC_in, &EC_out, &EC_set, EC_P, EC_I, EC_D, DIRECT);
 double pH_set, pH_in, pH_out;
-PID pH_pid(&pH_in, &pH_out, &pH_set, pH_P, pH_I, pH_D, DIRECT);
-
 RunningMedian N_samples = RunningMedian(SAMPLES);
 RunningMedian Ca_samples = RunningMedian(SAMPLES);
 RunningMedian K_samples = RunningMedian(SAMPLES);
@@ -109,11 +102,6 @@ void setup() {
   K_set = K_DEFAULT;
   EC_set = EC_DEFAULT;
   pH_set = PH_DEFAULT;
-  N_pid.SetMode(AUTOMATIC);
-  Ca_pid.SetMode(AUTOMATIC);
-  K_pid.SetMode(AUTOMATIC);
-  EC_pid.SetMode(AUTOMATIC);
-  pH_pid.SetMode(AUTOMATIC);
   
   // Start Temperature Sensors
   temperature.begin();
@@ -148,10 +136,16 @@ void read_sensors() {
 // Receives command from node and executes response. 
 void check_queue() {
   if (Serial.available()) {
+    
+    // TODO: This section should include parse failure handling
     char command = Serial.read();
     int set_point = Serial.parseInt();
-//    Serial.println(set_point);
-//    Serial.println(command);
+    if (VERBOSE) {
+      Serial.println(set_point);
+      Serial.println(command);
+    }
+    
+    // Switch structure for setpoint of which nutrient
     switch(command) {
       case 'N':
         N_set = set_point;
@@ -185,40 +179,51 @@ void check_queue() {
 /* --- Control Pumps --- */
 // Calculate PID values and control pumps
 void control_pumps() {
-  N_pid.Compute();
-  Ca_pid.Compute();
-  K_pid.Compute();
-  pH_pid.Compute();
-  EC_pid.Compute();
-//  Serial.println(N_out);
-//  Serial.println(Ca_out);
-//  Serial.println(K_out);
-//  Serial.println(pH_out);
-//  Serial.println(EC_out);
+  
+  // Compute output value
+  N_out = N_in;
+  K_out = K_in;
+  Ca_out = Ca_in;
+  pH_out = pH_in;
+  EC_out = EC_in;
+  
+  if (VERBOSE) {
+    Serial.println(N_out);
+    Serial.println(Ca_out);
+    Serial.println(K_out);
+    Serial.println(pH_out);
+    Serial.println(EC_out);
+  }
+  
+  /* --- Nutrient Application Decision Tree --- */
   if (N_out > N_set) {
     digitalWrite(N_PUMP_PIN, HIGH);   // Add Nitrogen Solution  
   }
   else if (N_out < N_set) {
     digitalWrite(N_PUMP_PIN, LOW);
   }
+  
   if (Ca_out > Ca_set) {
     digitalWrite(CA_PUMP_PIN, LOW);
   }
   else if (Ca_out < Ca_set) {
     digitalWrite(CA_PUMP_PIN, HIGH);  // Add Calcium Solution
   }
+  
   if (K_out > K_set) {
     digitalWrite(K_PUMP_PIN, LOW);    
   }
   else if (K_out < K_set) {
     digitalWrite(K_PUMP_PIN, HIGH); // Potassium Solution
   }
+  
   if (EC_out > EC_set) {
     digitalWrite(WATER_PUMP_PIN, HIGH);  // Add Water
   }
   else if (EC_out < EC_set) {
     digitalWrite(WATER_PUMP_PIN, LOW);
   }
+  
   if (pH_out > pH_set) {
     digitalWrite(HCL_PUMP_PIN, HIGH);  // Add HCL Solution
   }
