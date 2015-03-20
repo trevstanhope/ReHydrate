@@ -4,6 +4,7 @@
   License: Creative Commons 2015, Trevor Stanhope
   
   Control system for a recirculating hydroponic system.
+  This program is designed for Bang-Bang control, i.e. simple thresholding control of the pump relays.
   
   Todo:
   - test sensor functions
@@ -17,25 +18,32 @@
 #include "DallasTemperature.h"
 #include "OneWire.h"
 #include "stdio.h"
-#include "PID_v1.h"
 
 /* --- Constants --- */
 const boolean VERBOSE = true;
 
 // I/O Pins
 const int N_PUMP_PIN = 2;
-const int CA_PUMP_PIN = 3;
+const int Ca_PUMP_PIN = 3;
 const int K_PUMP_PIN = 4;
 const int WATER_PUMP_PIN = 5;
 const int HCL_PUMP_PIN = 6;
 
 // Analog Sensors
 const int N_SENSOR_PIN = A0;
-const int CA_SENSOR_PIN = A1;
+const int Ca_SENSOR_PIN = A1;
 const int K_SENSOR_PIN = A2;
 const int EC_SENSOR_PIN = A3;
 const int TEMP_SENSOR_PIN = A4; 
-const int PH_SENSOR_PIN = A5;
+const int pH_SENSOR_PIN = A5;
+
+// Command Chars
+const char N_SET_CMD = 'N';
+const char Ca_SET_CMD = 'C';
+const char K_SET_CMD = 'K';
+const char pH_SET_CMD = 'P';
+const char EC_SET_CMD = 'E';
+const char RESET_CMD = 'R';
 
 // Constants
 const int CHARS = 8;
@@ -46,9 +54,11 @@ const int SAMPLES = 20;
 const int BAUD = 9600;
 const int PRECISION = 2; // number of decimal places
 const int DIGITS = 6; // number of digits
-const int PH_DEFAULT = 512; // raw bit value at ideal pH
+
+// Default Setpoints
+const int pH_DEFAULT = 512; // raw bit value at ideal pH
 const int EC_DEFAULT = 512; // raw bit value at ideal EC
-const int CA_DEFAULT = 512; // raw bit value at ideal Ca
+const int Ca_DEFAULT = 512; // raw bit value at ideal Ca
 const int N_DEFAULT = 512; // raw bit value at ideal N
 const int K_DEFAULT = 512; // raw bit value at ideal K
 
@@ -83,25 +93,25 @@ void setup() {
   
   // Initialize Pump Control Pins (Digital)
   pinMode(N_PUMP_PIN, OUTPUT);
-  pinMode(CA_PUMP_PIN, OUTPUT);
+  pinMode(Ca_PUMP_PIN, OUTPUT);
   pinMode(K_PUMP_PIN, OUTPUT);
   pinMode(WATER_PUMP_PIN, OUTPUT);
   pinMode(HCL_PUMP_PIN, OUTPUT);
   
   // Initialize Sensor Input Pins (Analog)
   pinMode(N_SENSOR_PIN, INPUT);
-  pinMode(CA_SENSOR_PIN, INPUT);
-  pinMode(PH_SENSOR_PIN, INPUT);
+  pinMode(Ca_SENSOR_PIN, INPUT);
+  pinMode(pH_SENSOR_PIN, INPUT);
   pinMode(K_SENSOR_PIN, INPUT);
   pinMode(EC_SENSOR_PIN, INPUT);
   pinMode(TEMP_SENSOR_PIN, INPUT);
 
   // Turn the PID on
   N_set = N_DEFAULT;
-  Ca_set = CA_DEFAULT;
+  Ca_set = Ca_DEFAULT;
   K_set = K_DEFAULT;
   EC_set = EC_DEFAULT;
-  pH_set = PH_DEFAULT;
+  pH_set = pH_DEFAULT;
   
   // Start Temperature Sensors
   temperature.begin();
@@ -122,11 +132,11 @@ void loop() {
 // Collects data and sends it to node.
 void read_sensors() {
   dtostrf(test_temperature(), DIGITS, PRECISION, temp);
-  dtostrf(test_acidity(), DIGITS, PRECISION, pH);
-  dtostrf(test_conductivity(), DIGITS, PRECISION, EC);
-  dtostrf(test_nitrogen(), DIGITS, PRECISION, N);
-  dtostrf(test_calcium(), DIGITS,PRECISION, Ca);
-  dtostrf(test_potassium(), DIGITS, PRECISION, K);
+  dtostrf(test_pH(), DIGITS, PRECISION, pH);
+  dtostrf(test_EC(), DIGITS, PRECISION, EC);
+  dtostrf(test_N(), DIGITS, PRECISION, N);
+  dtostrf(test_Ca(), DIGITS,PRECISION, Ca);
+  dtostrf(test_K(), DIGITS, PRECISION, K);
   sprintf(output_buffer, "{'pH':%s,'EC':%s,'temp':%s,'N':%s,'Ca':%s,'K':%s}",pH,EC,temp,N,Ca,K); // concatenate message string
   Serial.println(output_buffer);
   Serial.flush();
@@ -140,34 +150,30 @@ void check_queue() {
     // TODO: This section should include parse failure handling
     char command = Serial.read();
     int set_point = Serial.parseInt();
-    if (VERBOSE) {
-      Serial.println(set_point);
-      Serial.println(command);
-    }
     
     // Switch structure for setpoint of which nutrient
     switch(command) {
-      case 'N':
+      case N_SET_CMD:
         N_set = set_point;
         break;
-      case 'C':
+      case Ca_SET_CMD:
         Ca_set = set_point;
         break;
-      case 'K':
+      case K_SET_CMD:
         K_set = set_point;
         break;
-      case 'E':
+      case EC_SET_CMD:
         EC_set = set_point;
         break;
-      case 'P':
+      case pH_SET_CMD:
         pH_set = set_point;
         break;
-      case 'R':
+      case RESET_CMD:
         N_set = N_DEFAULT;
-        Ca_set = CA_DEFAULT;
+        Ca_set = Ca_DEFAULT;
         K_set = K_DEFAULT;
         EC_set = EC_DEFAULT;
-        pH_set = PH_DEFAULT;
+        pH_set = pH_DEFAULT;
         break;
       default:
         break;
@@ -187,14 +193,6 @@ void control_pumps() {
   pH_out = pH_in;
   EC_out = EC_in;
   
-  if (VERBOSE) {
-    Serial.println(N_out);
-    Serial.println(Ca_out);
-    Serial.println(K_out);
-    Serial.println(pH_out);
-    Serial.println(EC_out);
-  }
-  
   /* --- Nutrient Application Decision Tree --- */
   if (N_out > N_set) {
     digitalWrite(N_PUMP_PIN, HIGH);   // Add Nitrogen Solution  
@@ -204,10 +202,10 @@ void control_pumps() {
   }
   
   if (Ca_out > Ca_set) {
-    digitalWrite(CA_PUMP_PIN, LOW);
+    digitalWrite(Ca_PUMP_PIN, LOW);
   }
   else if (Ca_out < Ca_set) {
-    digitalWrite(CA_PUMP_PIN, HIGH);  // Add Calcium Solution
+    digitalWrite(Ca_PUMP_PIN, HIGH);  // Add Calcium Solution
   }
   
   if (K_out > K_set) {
@@ -241,10 +239,10 @@ float test_temperature() {
 }
 
 /* --- Test pH --- */
-float test_acidity() {
+float test_pH() {
   long reading = 0; 
   for(int i = 0; i < SAMPLES; i++) {
-    reading += analogRead(PH_SENSOR_PIN); 
+    reading += analogRead(pH_SENSOR_PIN); 
   } 
   float val = reading / SAMPLES;
   pH_in = double(val); // #! Side effect
@@ -252,7 +250,7 @@ float test_acidity() {
 }
 
 /* --- Test EC --- */
-float test_conductivity() {
+float test_EC() {
   long reading = 0; 
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading += analogRead(EC_SENSOR_PIN); 
@@ -263,7 +261,7 @@ float test_conductivity() {
 }
 
 /* --- Test (N) Nitrogen --- */
-float test_nitrogen() {
+float test_N() {
   long reading = 0; 
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(N_SENSOR_PIN); 
@@ -276,10 +274,10 @@ float test_nitrogen() {
 }
 
 /* --- Test (Ca) Calcium --- */
-float test_calcium() {
+float test_Ca() {
   long reading = 0; 
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
-    reading = analogRead(CA_SENSOR_PIN); 
+    reading = analogRead(Ca_SENSOR_PIN); 
     Ca_samples.add(reading);
   } 
   float val = Ca_samples.getMedian();
@@ -288,7 +286,7 @@ float test_calcium() {
 }
 
 /* --- Test (K) Potassium --- */
-float test_potassium() {
+float test_K() {
   long reading = 0; 
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading += analogRead(K_SENSOR_PIN); 

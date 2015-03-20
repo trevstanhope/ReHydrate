@@ -23,19 +23,22 @@
             "X" : [512, 1024],
             "Y" : [0, 300],
             "D" : 1,
-            "UNITS" : "PPM"
+            "UNITS" : "PPM",
+            "SET_CMD" : "N"
         },
         "Ca" : {
             "X" : [512, 1024],
             "Y" : [0, 300],
             "D" : 1,
-            "UNITS" : "PPM"
+            "UNITS" : "PPM",
+            "SET_CMD" : "C"
         },
         "K" : {
             "X" : [512, 1024],
             "Y" : [0, 300],
             "D" : 1,
-            "UNITS" : "PPM"
+            "UNITS" : "PPM",
+            "SET_CMD" : "K"
         }  
     }
 }

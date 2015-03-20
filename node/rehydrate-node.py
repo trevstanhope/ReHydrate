@@ -126,7 +126,7 @@ class ReHydrate:
                     del(data[p])
                     self.add_log_entry('CHECK ERROR', 'invalid range')     
             except Exception as error:
-                self.add_log_entry('CHECK ERROR', 'Key does not exist')                
+                self.add_log_entry('CHECK ERROR', 'Key does not exist: %s' % p)                
         return data
     
     ## Calculate PPM from serial bits
@@ -179,7 +179,8 @@ class ReHydrate:
     
     ## Store sample to database   
     def store_sample(self, sensor_data):
-        self.add_log_entry('STORE', 'Storing sample\n%s' % json.dumps(sensor_data, sort_keys=True, indent=4))
+        for k in sensor_data:
+            self.add_log_entry(k, '= %s' % sensor_data[k])
         try:
             date = datetime.strftime(datetime.now(), "%Y%m")
             db = self.client[date]
@@ -193,7 +194,7 @@ class ReHydrate:
     ## Update Graphs
     def update_graphs(self):
         try:
-            hours = self.GRAPH_RANGE
+            hours = self.GRAPH_RANGE #TODO
             date = datetime.strftime(datetime.now(), "%Y%m")
             db = self.client[date]
             col = db['samples']
@@ -233,8 +234,29 @@ class ReHydrate:
             millivolt_data = self.calculate_millivolt(sensor_data)
             proc_data = dict(ppm_data.items() + millivolt_data.items())
             self.post_sample(proc_data)
-            self.store_sample(proc_data)                    
+            self.store_sample(proc_data)
     
+    ## Calibrate
+    def calibrate(self):
+        self.add_log_entry('CALIBRATE', 'Running calibration routine')
+        minutes = 10
+        date = datetime.strftime(datetime.now(), "%Y%m")
+        db = self.client[date]
+        col = db['samples']
+        dt = datetime.now() - timedelta(minutes=minutes) # get datetime
+        matches = col.find({'time':{'$gt':dt, '$lt':datetime.now()}})
+        calibration_params = [p for p in self.SENSORS.keys()]
+        calibration_data = []
+        for sample in matches:
+            calibration_point = [sample[p] for p in calibration_params]
+            calibration_data.append(calibration_point)
+        calibration_means = np.mean(calibration_data, axis=0)
+        for i in range(len(calibration_means)):
+            p = calibration_params[i]
+            calibration_cmd = "%s%d" % (self.SENSORS[p]['SET_CMD'], calibration_means[i])
+            self.add_log_entry("SET", "Setting %s with: %s" % (p, calibration_cmd))
+            self.arduino.write(calibration_cmd)
+        
     ## Shutdown
     def shutdown(self):
         self.add_log_entry('MISC', 'Shutting Down')
@@ -250,6 +272,16 @@ class ReHydrate:
     def index(self):
         with open('static/index.html') as html:
             return html.read()
+            
+    ## Handle Posts
+    @cherrypy.expose
+    def default(self, *args, **kwargs):
+        try:
+            if kwargs['type'] == 'calibrate':
+                self.calibrate()
+        except Exception as err:
+            self.add_log_entry('POST_ERROR', str(err))
+        return None
     
 # Main
 if __name__ == '__main__':
