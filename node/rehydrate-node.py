@@ -230,9 +230,8 @@ class ReHydrate:
         self.add_log_entry('NEW', 'Queried documents in time frame')
         sensor_data = self.read_arduino()
         if self.check_data(sensor_data):
-            ppm_data = self.calculate_ppm(sensor_data)
             millivolt_data = self.calculate_millivolt(sensor_data)
-            proc_data = dict(ppm_data.items() + millivolt_data.items())
+            proc_data = dict(millivolt_data.items())
             self.post_sample(proc_data)
             self.store_sample(proc_data)
     
