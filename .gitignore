@@ -1,4 +1,4 @@
 *~
 #*#
 *.log
-node/data/*
+node/data/samples.json
