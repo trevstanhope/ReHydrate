@@ -14,6 +14,7 @@
                         data: {'type':'calibrate'},
                         success: function(msg) {
                             window.alert("Setting New Calibration Points!");
+                            location.reload();
                         }
                     });
 
@@ -26,6 +27,7 @@
         <script>
             (function() {
                 var jsonfile = "data/samples.json";
+                var calibration = $.getJSON("data/calibration.json");
                 var zParam = "sensor_id";
                 var xLabel = "Date / Time";
                 var xParam = "time";
@@ -63,6 +65,24 @@
                     });
                     x.domain(d3.extent(data, function(d) { return d[xParam]; }));
                     y.domain([yMin, yMax]).nice();
+                    svg.append("line")
+                        .attr("x1", x( x.domain()[0] ) )
+                        .attr("x2", x( x.domain()[1] ) )
+                        .attr("y1", y( calibration.responseJSON["Ca_mV"] ) )   // Calcium calibration value
+                        .attr("y2", y( calibration.responseJSON["Ca_mV"] ) )
+                        .style("stroke", "blue")
+                    svg.append("line")
+                        .attr("x1", x( x.domain()[0] ) )
+                        .attr("x2", x( x.domain()[1] ) )
+                        .attr("y1", y( calibration.responseJSON["N_mV"] ) )   // Nitrogen calibration value
+                        .attr("y2", y( calibration.responseJSON["N_mV"] ) )
+                        .style("stroke", "green")
+                    svg.append("line")
+                        .attr("x1", x( x.domain()[0] ) )
+                        .attr("x2", x( x.domain()[1] ) )
+                        .attr("y1", y( calibration.responseJSON["K_mV"] ) )   // Potassium calibration value
+                        .attr("y2", y( calibration.responseJSON["K_mV"] ) )
+                        .style("stroke", "orange")
                     svg.append("g")
                         .attr("class", "x axis")
                         .attr("transform", "translate(0," + height + ")")
@@ -131,6 +151,7 @@
             })();
             (function() {
                 var jsonfile = "data/samples.json";
+                var calibration = $.getJSON("data/calibration.json");
                 var zParam = "sensor_id";
                 var xLabel = "Date / Time";
                 var xParam = "time";
@@ -168,6 +189,24 @@
                     });
                     x.domain(d3.extent(data, function(d) { return d[xParam]; }));
                     y.domain([yMin, yMax]).nice();
+                    svg.append("line")
+                        .attr("x1", x( x.domain()[0] ) )
+                        .attr("x2", x( x.domain()[1] ) )
+                        .attr("y1", y( calibration.responseJSON["Ca"] ) )   // Calcium calibration value
+                        .attr("y2", y( calibration.responseJSON["Ca"] ) )
+                        .style("stroke", "blue")
+                    svg.append("line")
+                        .attr("x1", x( x.domain()[0] ) )
+                        .attr("x2", x( x.domain()[1] ) )
+                        .attr("y1", y( calibration.responseJSON["N"] ) )   // Nitrogen calibration value
+                        .attr("y2", y( calibration.responseJSON["N"] ) )
+                        .style("stroke", "green")
+                    svg.append("line")
+                        .attr("x1", x( x.domain()[0] ) )
+                        .attr("x2", x( x.domain()[1] ) )
+                        .attr("y1", y( calibration.responseJSON["K"] ) )   // Potassium calibration value
+                        .attr("y2", y( calibration.responseJSON["K"] ) )
+                        .style("stroke", "orange")
                     svg.append("g")
                         .attr("class", "x axis")
                         .attr("transform", "translate(0," + height + ")")

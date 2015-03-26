@@ -254,12 +254,19 @@ class ReHydrate:
             calibration_point = [sample[p] for p in calibration_params]
             calibration_data.append(calibration_point)
         calibration_means = np.mean(calibration_data, axis=0)
+        data = {}
         for i in range(len(calibration_means)):
             p = calibration_params[i]
+            data[p] = calibration_means[i]
             calibration_cmd = "%s%d" % (self.SENSORS[p]['SET_CMD'], calibration_means[i])
             self.add_log_entry("SET", "Setting %s with: %s" % (p, calibration_cmd))
             self.arduino.write(calibration_cmd)
-        
+
+        # Generate calibration JSON
+        with open('data/calibration.json', 'w') as jsonfile:
+            data = self.calculate_millivolt(data)
+            jsonfile.write(json.dumps(data, indent=True))
+            
     ## Shutdown
     def shutdown(self):
         self.add_log_entry('MISC', 'Shutting Down')
