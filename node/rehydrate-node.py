@@ -79,6 +79,7 @@ class ReHydrate:
             self.sensor_data = {}
             self.arduino = Serial(self.ARDUINO_DEV, self.ARDUINO_BAUD, timeout=self.ARDUINO_TIMEOUT)
         except Exception as error:
+            self.arduino = None
             self.add_log_entry('ARDUINO', str(error))
     
     ## Init Log
@@ -103,11 +104,14 @@ class ReHydrate:
         self.add_log_entry('ARDUINO', 'Reading Arduino')
         try:
             string = self.arduino.readline()
+        except Exception as error:
+            self.add_log_entry('ARDUINO ERROR', str(error))
+        try:
             result = ast.literal_eval(string)
             sensor_data = self.check_data(result)
             return sensor_data
         except Exception as error:
-            self.add_log_entry('ARDUINO ERROR', str(error))
+            self.add_log_entry('PARSE ERROR', str(error))
             return {} #! WARNING: set to generate random data if no arduino
     
     ## Generate Random Data
@@ -225,13 +229,15 @@ class ReHydrate:
         
     ## New Sample
     def new_sample(self):
-        self.add_log_entry('NEW', 'Queried documents in time frame')
-        sensor_data = self.read_arduino()
-        if self.check_data(sensor_data):
-            millivolt_data = self.calculate_millivolt(sensor_data)
-            proc_data = dict(millivolt_data.items())
-            self.post_sample(proc_data)
-            self.store_sample(proc_data)
+        if self.arduino:
+            sensor_data = self.read_arduino()
+            if self.check_data(sensor_data):
+                millivolt_data = self.calculate_millivolt(sensor_data)
+                proc_data = dict(millivolt_data.items())
+                self.post_sample(proc_data)
+                self.store_sample(proc_data)
+        else:
+            self.init_arduino()
     
     ## Calibrate
     def calibrate(self):
