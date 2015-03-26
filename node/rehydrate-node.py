@@ -210,13 +210,11 @@ class ReHydrate:
                 for sample in matches:
                     for p in self.SENSORS.keys():
                         try:
-                            units = self.SENSORS[p]['UNITS']
                             point = {
                                 'time': datetime.strftime(sample['time'], "%Y-%m-%d %H:%M:%S"),
                                 'sensor_id' : p,
                                 'reading' : sample[p],
                                 'mV' : sample['%s_mV' % p],
-                                units : sample['%s_%s' % (p, units)]
                             }
                             results.append(point)
                         except Exception as error:
