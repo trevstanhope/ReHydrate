@@ -17,12 +17,22 @@
                             location.reload();
                         }
                     });
-
+                });
+                $('#reload').click(function() {
+                    $.ajax({
+                        type: "POST",
+                        url: "reload",
+                        data: {'type':'reload'},
+                        success: function(msg) {
+                            location.reload();
+                        }
+                    });
                 });
             });
         </script>
         <form id="calibrate_form" method="post">
-            <input type="button" id="calibrate" value="Calibrate"/> 
+            <input type="button" id="calibrate" value="Calibrate"/>
+            <input type="button" id="reload" value="Reload"/> 
         </form>
         <script>
             (function() {
