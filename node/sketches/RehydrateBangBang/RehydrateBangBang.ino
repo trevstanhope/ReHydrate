@@ -279,6 +279,7 @@ float test_Ca() {
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(Ca_SENSOR_PIN); 
     Ca_samples.add(reading);
+    delay(READ_WAIT);
   } 
   float val = Ca_samples.getMedian();
   Ca_in = double(val); // #! Side effect
@@ -289,9 +290,11 @@ float test_Ca() {
 float test_K() {
   long reading = 0; 
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
-    reading += analogRead(K_SENSOR_PIN); 
+    reading = analogRead(K_SENSOR_PIN); 
+    K_samples.add(reading);
+    delay(READ_WAIT);
   } 
-  float val = reading / SAMPLES;
+  float val = K_samples.getMedian();
   K_in = double(val); // #! Side effect
   return val;
 }
