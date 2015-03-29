@@ -242,7 +242,7 @@ class ReHydrate:
     ## Calibrate
     def calibrate(self):
         self.add_log_entry('CALIBRATE', 'Running calibration routine')
-        minutes = 10
+        minutes = self.CALIBRATION_INTERVAL
         date = datetime.strftime(datetime.now(), "%Y%m")
         db = self.client[date]
         col = db['samples']

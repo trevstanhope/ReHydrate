@@ -48,9 +48,9 @@ const char RESET_CMD = 'R';
 // Constants
 const int CHARS = 8;
 const int BUFF_SIZE = 128;
-const int READ_WAIT = 20;
-const int INTERVAL = 5000; // standardized delay between readings/adjustments
-const int SAMPLES = 20;
+const int READ_WAIT = 2;
+const int INTERVAL = 10000; // standardized delay between readings/adjustments
+const int SAMPLES = 500;
 const int BAUD = 9600;
 const int PRECISION = 2; // number of decimal places
 const int DIGITS = 6; // number of digits
@@ -84,13 +84,10 @@ double Ca_set, Ca_in, Ca_out;
 double K_set, K_in, K_out;
 double EC_set, EC_in, EC_out;
 double pH_set, pH_in, pH_out;
-RunningMedian N_samples = RunningMedian(SAMPLES);
-RunningMedian Ca_samples = RunningMedian(SAMPLES);
-RunningMedian K_samples = RunningMedian(SAMPLES);
 
 /* --- Setup --- */
 void setup() {
-  
+  // Initial
   // Initialize Pump Control Pins (Digital)
   pinMode(N_PUMP_PIN, OUTPUT);
   pinMode(Ca_PUMP_PIN, OUTPUT);
@@ -105,7 +102,7 @@ void setup() {
   pinMode(K_SENSOR_PIN, INPUT);
   pinMode(EC_SENSOR_PIN, INPUT);
   pinMode(TEMP_SENSOR_PIN, INPUT);
-
+  
   // Turn the PID on
   N_set = N_DEFAULT;
   Ca_set = Ca_DEFAULT;
@@ -263,12 +260,13 @@ float test_EC() {
 /* --- Test (N) Nitrogen --- */
 float test_N() {
   long reading = 0; 
+  long sum = 0;
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(N_SENSOR_PIN); 
-    N_samples.add(reading);
+    sum = sum + reading;
     delay(READ_WAIT);
   } 
-  float val = N_samples.getMedian();
+  float val = sum / SAMPLES;
   N_in = double(val); // #! Side effect
   return val;
 }
@@ -276,12 +274,13 @@ float test_N() {
 /* --- Test (Ca) Calcium --- */
 float test_Ca() {
   long reading = 0; 
+  long sum = 0; 
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(Ca_SENSOR_PIN); 
-    Ca_samples.add(reading);
+    sum = sum + reading;
     delay(READ_WAIT);
   } 
-  float val = Ca_samples.getMedian();
+  float val = sum / SAMPLES;
   Ca_in = double(val); // #! Side effect
   return val;
 }
@@ -289,12 +288,13 @@ float test_Ca() {
 /* --- Test (K) Potassium --- */
 float test_K() {
   long reading = 0; 
+  long sum = 0;
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(K_SENSOR_PIN); 
-    K_samples.add(reading);
+    sum = sum + reading;
     delay(READ_WAIT);
   } 
-  float val = K_samples.getMedian();
+  float val = sum / SAMPLES;
   K_in = double(val); // #! Side effect
   return val;
 }
