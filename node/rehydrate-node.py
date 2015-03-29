@@ -229,15 +229,18 @@ class ReHydrate:
         
     ## New Sample
     def new_sample(self):
-        if self.arduino:
-            sensor_data = self.read_arduino()
-            if self.check_data(sensor_data):
-                millivolt_data = self.calculate_millivolt(sensor_data)
-                proc_data = dict(millivolt_data.items())
-                self.post_sample(proc_data)
-                self.store_sample(proc_data)
-        else:
-            self.init_arduino()
+        try:
+            if self.arduino:
+                sensor_data = self.read_arduino()
+                if self.check_data(sensor_data):
+                    millivolt_data = self.calculate_millivolt(sensor_data)
+                    proc_data = dict(millivolt_data.items())
+                    self.post_sample(proc_data)
+                    self.store_sample(proc_data)
+            else:
+                self.init_arduino()
+        except Exception as error:
+            self.add_log_entry('SAMPLE ERROR', str(error))
     
     ## Calibrate
     def calibrate(self):
