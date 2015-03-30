@@ -3,42 +3,38 @@
     "MONGO_PORT" : 27017,
     "CHERRYPY_PORT": 8080,
     "CHERRYPY_ADDR": "0.0.0.0",
-    "SAMPLE_INTERVAL": 1,
+    "SAMPLE_INTERVAL": 2,
     "UPDATE_INTERVAL": 10,
     "CALIBRATION_INTERVAL": 1,
     "POST_URL": "http://127.0.0.1:5000",
-    "ARDUINO_DEV": "/dev/ttyACM0",
+    "ARDUINO_DEV": "/dev/ttyACM1",
     "ARDUINO_BAUD": 9600,
     "ARDUINO_TIMEOUT" : 3,
     "LOG_FILE" : "%Y-%m-%d.log",
     "LOG_DIR" : "./logs",
     "SHUTDOWN_CMD" : "sudo reboot",
-    "MV_PER_BIT" : 0.97,
-    "MV_OFFSET" : 6,
-    "BIT_AT_ZERO" : 509,
     "GRAPH_RANGE" : 6,
     "MV_PRECISION" : 0,
-    "PPM_PRECISION" : 1,
     "SENSORS" : {
         "N" : {
-            "X" : [512, 1024],
-            "Y" : [0, 300],
+            "MV_OFFSET" : 80,
+            "MV_PER_BIT" : 0.97,
+            "BIT_AT_ZERO" : 0,
             "D" : 1,
-            "UNITS" : "PPM",
             "SET_CMD" : "N"
         },
         "Ca" : {
-            "X" : [512, 1024],
-            "Y" : [0, 300],
+            "MV_OFFSET" : 6,
+            "MV_PER_BIT" : 0.97,
+            "BIT_AT_ZERO" : 509,
             "D" : 1,
-            "UNITS" : "PPM",
             "SET_CMD" : "C"
         },
         "K" : {
-            "X" : [512, 1024],
-            "Y" : [0, 300],
+            "MV_OFFSET" : -57,
+            "MV_PER_BIT" : 0.97,
+            "BIT_AT_ZERO" : 0,
             "D" : 1,
-            "UNITS" : "PPM",
             "SET_CMD" : "K"
         }  
     }

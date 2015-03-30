@@ -1,3 +1,4 @@
+
 /*
   ReHydrateBangB.ino
   Version: 0.15.2
@@ -14,10 +15,11 @@
 */
 
 /* --- Libraries --- */
-#include "RunningMedian.h"
 #include "DallasTemperature.h"
 #include "OneWire.h"
 #include "stdio.h"
+#include <RunningMedian.h>
+
 
 /* --- Constants --- */
 const boolean VERBOSE = true;
@@ -48,9 +50,9 @@ const char RESET_CMD = 'R';
 // Constants
 const int CHARS = 8;
 const int BUFF_SIZE = 128;
-const int READ_WAIT = 2;
-const int INTERVAL = 1000; // standardized delay between readings/adjustments
-const int SAMPLES = 100;
+const int READ_WAIT = 10;
+const int INTERVAL = 5; // standardized delay between readings/adjustments
+const int SAMPLES = 200;
 const int BAUD = 9600;
 const int PRECISION = 2; // number of decimal places
 const int DIGITS = 6; // number of digits
@@ -84,6 +86,9 @@ double Ca_set, Ca_in, Ca_out;
 double K_set, K_in, K_out;
 double EC_set, EC_in, EC_out;
 double pH_set, pH_in, pH_out;
+RunningMedian N_samples = RunningMedian(SAMPLES);
+RunningMedian Ca_samples = RunningMedian(SAMPLES);
+RunningMedian K_samples = RunningMedian(SAMPLES);
 
 /* --- Setup --- */
 void setup() {
@@ -260,13 +265,12 @@ float test_EC() {
 /* --- Test (N) Nitrogen --- */
 float test_N() {
   long reading = 0; 
-  long sum = 0;
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(N_SENSOR_PIN); 
-    sum = sum + reading;
+    N_samples.add(reading);
     delay(READ_WAIT);
   } 
-  float val = sum / SAMPLES;
+  float val = N_samples.getAverage();
   N_in = double(val); // #! Side effect
   return val;
 }
@@ -274,13 +278,12 @@ float test_N() {
 /* --- Test (Ca) Calcium --- */
 float test_Ca() {
   long reading = 0; 
-  long sum = 0; 
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(Ca_SENSOR_PIN); 
-    sum = sum + reading;
+    Ca_samples.add(reading);
     delay(READ_WAIT);
   } 
-  float val = sum / SAMPLES;
+  float val = Ca_samples.getAverage();
   Ca_in = double(val); // #! Side effect
   return val;
 }
@@ -288,13 +291,12 @@ float test_Ca() {
 /* --- Test (K) Potassium --- */
 float test_K() {
   long reading = 0; 
-  long sum = 0;
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(K_SENSOR_PIN); 
-    sum = sum + reading;
+    K_samples.add(reading);
     delay(READ_WAIT);
   } 
-  float val = sum / SAMPLES;
+  float val = K_samples.getAverage();
   K_in = double(val); // #! Side effect
   return val;
 }

@@ -156,8 +156,11 @@ class ReHydrate:
         try:
             self.add_log_entry('PROCESSING', 'Calculate mV')  
             for p in self.SENSORS.keys():
+                mv_per_bit = self.SENSORS[p]["MV_PER_BIT"]
+                mv_offset = self.SENSORS[p]["MV_OFFSET"]
+                bit_at_zero = self.SENSORS[p]["BIT_AT_ZERO"]
                 x_in = data[p]
-                y_out = self.MV_PER_BIT * (x_in - self.BIT_AT_ZERO) - self.MV_OFFSET
+                y_out = mv_per_bit * (x_in - bit_at_zero) + mv_offset
                 data['%s_mV' % p] = round(y_out, self.MV_PRECISION)
             return data
         except Exception as error:
