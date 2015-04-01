@@ -19,11 +19,8 @@
 #include "OneWire.h"
 #include "stdio.h"
 #include <RunningMedian.h>
-#include <Average.h>
 
 /* --- Constants --- */
-const boolean VERBOSE = true;
-
 // I/O Pins
 const int N_PUMP_PIN = 2;
 const int Ca_PUMP_PIN = 3;
@@ -50,12 +47,11 @@ const char RESET_CMD = 'R';
 // Constants
 const int CHARS = 8;
 const int BUFF_SIZE = 128;
-const int READ_WAIT = 0;
-const int INTERVAL = 0; // standardized delay between readings/adjustments
-const int SAMPLES = 1000;
+const int INTERVAL = 0; // standardized delay between samples posted to the python application
+const int SAMPLES = 10000; // samples to take for each sensor
 const int BAUD = 9600;
-const int PRECISION = 2; // number of decimal places
-const int DIGITS = 6; // number of digits
+const int PRECISION = 2; // number of floating point decimal places
+const int DIGITS = 6; // number of floating point digits 
 
 // Default Setpoints
 const int pH_DEFAULT = 512; // raw bit value at ideal pH
@@ -87,7 +83,8 @@ double K_set, K_in, K_out;
 double EC_set, EC_in, EC_out;
 double pH_set, pH_in, pH_out;
 
-
+RunningMedian pH_samples = RunningMedian(SAMPLES);
+RunningMedian EC_samples = RunningMedian(SAMPLES);
 RunningMedian N_samples = RunningMedian(SAMPLES);
 RunningMedian Ca_samples = RunningMedian(SAMPLES);
 RunningMedian K_samples = RunningMedian(SAMPLES);
@@ -246,9 +243,10 @@ float test_temperature() {
 float test_pH() {
   long reading = 0; 
   for(int i = 0; i < SAMPLES; i++) {
-    reading += analogRead(pH_SENSOR_PIN); 
+    reading = analogRead(pH_SENSOR_PIN); 
+    pH_samples.add(reading);
   } 
-  float val = reading / SAMPLES;
+  float val = pH_samples.getAverage();
   pH_in = double(val); // #! Side effect
   return val;
 }
@@ -256,10 +254,11 @@ float test_pH() {
 /* --- Test EC --- */
 float test_EC() {
   long reading = 0; 
-  for(int i = 0; i < SAMPLES; i++) { // sample 100 times
-    reading += analogRead(EC_SENSOR_PIN); 
+  for(int i = 0; i < SAMPLES; i++) { // read sensor SAMPLE times
+    reading = analogRead(EC_SENSOR_PIN); 
+    EC_samples.add(reading);
   } 
-  float val = 0; // reading / SAMPLES;
+  float val = EC_samples.getAverage();
   EC_in = double(val); // #! Side effect
   return val;
 }
@@ -267,10 +266,9 @@ float test_EC() {
 /* --- Test (N) Nitrogen --- */
 float test_N() {
   long reading = 0; 
-  for(int i = 0; i < SAMPLES; i++) { // sample 100 times
+  for(int i = 0; i < SAMPLES; i++) { // read sensor SAMPLE times
     reading = analogRead(N_SENSOR_PIN); 
     N_samples.add(reading);
-    delay(READ_WAIT);
   } 
   float val = N_samples.getAverage();
   N_in = double(val); // #! Side effect
@@ -280,10 +278,9 @@ float test_N() {
 /* --- Test (Ca) Calcium --- */
 float test_Ca() {
   long reading = 0; 
-  for(int i = 0; i < SAMPLES; i++) { // sample 100 times
+  for(int i = 0; i < SAMPLES; i++) { // read sensor SAMPLE times
     reading = analogRead(Ca_SENSOR_PIN); 
     Ca_samples.add(reading);
-    delay(READ_WAIT);
   } 
   float val = Ca_samples.getAverage();
   Ca_in = double(val); // #! Side effect
@@ -293,10 +290,9 @@ float test_Ca() {
 /* --- Test (K) Potassium --- */
 float test_K() {
   long reading = 0; 
-  for(int i = 0; i < SAMPLES; i++) { // sample 100 times
+  for(int i = 0; i < SAMPLES; i++) { // read sensor SAMPLE times
     reading = analogRead(K_SENSOR_PIN); 
     K_samples.add(reading);
-    delay(READ_WAIT);
   } 
   float val = K_samples.getAverage();
   K_in = double(val); // #! Side effect
