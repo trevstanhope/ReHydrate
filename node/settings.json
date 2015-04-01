@@ -7,19 +7,19 @@
     "UPDATE_INTERVAL": 10,
     "CALIBRATION_INTERVAL": 1,
     "POST_URL": "http://127.0.0.1:5000",
-    "ARDUINO_DEV": "/dev/ttyACM1",
+    "ARDUINO_DEV": "/dev/ttyACM",
     "ARDUINO_BAUD": 9600,
     "ARDUINO_TIMEOUT" : 3,
     "LOG_FILE" : "%Y-%m-%d.log",
     "LOG_DIR" : "./logs",
     "SHUTDOWN_CMD" : "sudo reboot",
-    "GRAPH_RANGE" : 6,
+    "GRAPH_RANGE" : 1,
     "MV_PRECISION" : 0,
     "SENSORS" : {
         "N" : {
             "MV_OFFSET" : 80,
             "MV_PER_BIT" : 0.97,
-            "BIT_AT_ZERO" : 0,
+            "BIT_AT_ZERO" : 100,
             "D" : 1,
             "SET_CMD" : "N"
         },
@@ -33,7 +33,7 @@
         "K" : {
             "MV_OFFSET" : -57,
             "MV_PER_BIT" : 0.97,
-            "BIT_AT_ZERO" : 0,
+            "BIT_AT_ZERO" : 100,
             "D" : 1,
             "SET_CMD" : "K"
         }  

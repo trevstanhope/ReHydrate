@@ -19,7 +19,7 @@
 #include "OneWire.h"
 #include "stdio.h"
 #include <RunningMedian.h>
-
+#include <Average.h>
 
 /* --- Constants --- */
 const boolean VERBOSE = true;
@@ -50,9 +50,9 @@ const char RESET_CMD = 'R';
 // Constants
 const int CHARS = 8;
 const int BUFF_SIZE = 128;
-const int READ_WAIT = 10;
-const int INTERVAL = 5; // standardized delay between readings/adjustments
-const int SAMPLES = 200;
+const int READ_WAIT = 0;
+const int INTERVAL = 0; // standardized delay between readings/adjustments
+const int SAMPLES = 1000;
 const int BAUD = 9600;
 const int PRECISION = 2; // number of decimal places
 const int DIGITS = 6; // number of digits
@@ -86,6 +86,8 @@ double Ca_set, Ca_in, Ca_out;
 double K_set, K_in, K_out;
 double EC_set, EC_in, EC_out;
 double pH_set, pH_in, pH_out;
+
+
 RunningMedian N_samples = RunningMedian(SAMPLES);
 RunningMedian Ca_samples = RunningMedian(SAMPLES);
 RunningMedian K_samples = RunningMedian(SAMPLES);

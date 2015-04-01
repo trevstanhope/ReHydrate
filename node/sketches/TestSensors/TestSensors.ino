@@ -33,9 +33,7 @@ const int pH_SENSOR_PIN = A5;
 // Constants
 const int CHARS = 8;
 const int BUFF_SIZE = 128;
-const int READ_WAIT = 2;
-const int INTERVAL = 10; // standardized delay between readings/adjustments
-const int SAMPLES = 500;
+const int SAMPLES = 1000;
 const int BAUD = 9600;
 const int PRECISION = 2; // number of decimal places
 const int DIGITS = 6; // number of digits
@@ -72,12 +70,22 @@ void setup() {
 /* --- Loop --- */
 void loop() {
   read_sensors();
-  wait();
+  delay(1000);
 }
 
 /* --- Read Sensors --- */
 // Collects data and sends it to node.
 void read_sensors() {
+  int N_reading = 0;
+  int Ca_reading = 0;
+  int K_reading = 0;
+  for(int i = 0; i < SAMPLES; i++) { // sample 100 times
+    N_reading = analogRead(N_SENSOR_PIN);  
+    K_reading = analogRead(K_SENSOR_PIN); 
+    Ca_reading = analogRead(Ca_SENSOR_PIN); 
+    sprintf(output_buffer, "%d,%d,%d", N_reading, Ca_reading, K_reading); // concatenate message string
+    Serial.println(output_buffer);
+  } 
   dtostrf(test_temperature(), DIGITS, PRECISION, temp);
   dtostrf(test_pH(), DIGITS, PRECISION, pH);
   dtostrf(test_EC(), DIGITS, PRECISION, EC);
@@ -124,7 +132,6 @@ float test_N() {
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(N_SENSOR_PIN); 
     sum = sum + reading;
-    delay(READ_WAIT);
   } 
   float val = sum / SAMPLES;
   return val;
@@ -137,7 +144,6 @@ float test_Ca() {
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(Ca_SENSOR_PIN); 
     sum = sum + reading;
-    delay(READ_WAIT);
   } 
   float val = sum / SAMPLES;
   return val;
@@ -150,13 +156,7 @@ float test_K() {
   for(int i = 0; i < SAMPLES; i++) { // sample 100 times
     reading = analogRead(K_SENSOR_PIN); 
     sum = sum + reading;
-    delay(READ_WAIT);
   } 
   float val = sum / SAMPLES;
   return val;
-}
-
-/* --- Wait --- */
-void wait() {
-  delay(INTERVAL);
 }

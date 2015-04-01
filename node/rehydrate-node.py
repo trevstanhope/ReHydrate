@@ -77,7 +77,12 @@ class ReHydrate:
         try:
             self.add_log_entry('ARDUINO', 'Initializing Arduino')
             self.sensor_data = {}
-            self.arduino = Serial(self.ARDUINO_DEV, self.ARDUINO_BAUD, timeout=self.ARDUINO_TIMEOUT)
+            for i in range(3):
+                try:
+                    self.arduino = Serial(self.ARDUINO_DEV + str(i), self.ARDUINO_BAUD, timeout=self.ARDUINO_TIMEOUT)
+                    break
+                except Exception as error:
+                    self.add_log_entry('ARDUINO', str(error))
         except Exception as error:
             self.arduino = None
             self.add_log_entry('ARDUINO', str(error))
@@ -229,7 +234,33 @@ class ReHydrate:
                 jsonfile.write(json.dumps(results, indent=True))
         except Exception as error:
             self.add_log_entry('GRAPH ERROR 3', str(error))
-        
+            
+    ## Generate CSV
+    def generate_csv(self):
+        self.add_log_entry('CSV', 'Generating CSV')
+        hours = self.GRAPH_RANGE #TODO
+        date = datetime.strftime(datetime.now(), "%Y%m")
+        db = self.client[date]
+        col = db['samples']
+        dt = datetime.now() - timedelta(hours=hours) # get datetime
+        matches = col.find({'time':{'$gt':dt, '$lt':datetime.now()}})
+        try:
+            with open('data/samples.csv', 'w') as csvfile:
+                sample = matches.next()
+                del sample['_id']
+                headers = [str(i) for i in sample.keys()]
+                headers.append('\n')
+                out = ','.join(headers)
+                csvfile.write(out)
+                for sample in matches:
+                    del sample['_id']
+                    a = [str(i) for i in sample.values()]
+                    a.append('\n')
+                    out = ','.join(a)
+                    csvfile.write(out)
+        except Exception as error:
+            self.add_log_entry('CSV ERROR', str(error))
+               
     ## New Sample
     def new_sample(self):
         try:
@@ -295,6 +326,8 @@ class ReHydrate:
         try:
             if kwargs['type'] == 'calibrate':
                 self.calibrate()
+            if kwargs['type'] == 'csv':
+                self.generate_csv()
         except Exception as err:
             self.add_log_entry('POST_ERROR', str(err))
         return None

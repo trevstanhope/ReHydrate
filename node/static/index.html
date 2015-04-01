@@ -28,12 +28,25 @@
                         }
                     });
                 });
+                $('#csv').click(function() {
+                    $.ajax({
+                        type: "POST",
+                        url: "csv",
+                        data: {'type':'csv'},
+                        success: function(msg) {
+                            window.open("data/samples.csv");
+                        }
+                    });
+                });
             });
         </script>
-        <form id="calibrate_form" method="post">
-            <input type="button" id="calibrate" value="Calibrate"/>
-            <input type="button" id="reload" value="Reload"/> 
-        </form>
+        <center>
+            <form id="calibrate_form" method="post">
+                <input type="button" id="calibrate" value="Calibrate"/>
+                <input type="button" id="reload" value="Reload"/> 
+                <input type="button" id="csv" value="Generate CSV"/> 
+            </form>
+        </center>
         <script>
             (function() {
                 var jsonfile = "data/samples.json";
