@@ -48,7 +48,8 @@ const char RESET_CMD = 'R';
 const int CHARS = 8;
 const int BUFF_SIZE = 128;
 const int INTERVAL = 0; // standardized delay between samples posted to the python application
-const int SAMPLES = 10000; // samples to take for each sensor
+const int SAMPLES = 1000; // samples to take for each sensor
+const int SMOOTHING = 5; // samples to take for each sensor
 const int BAUD = 9600;
 const int PRECISION = 2; // number of floating point decimal places
 const int DIGITS = 6; // number of floating point digits 
@@ -88,6 +89,12 @@ RunningMedian EC_samples = RunningMedian(SAMPLES);
 RunningMedian N_samples = RunningMedian(SAMPLES);
 RunningMedian Ca_samples = RunningMedian(SAMPLES);
 RunningMedian K_samples = RunningMedian(SAMPLES);
+
+RunningMedian pH_smooth = RunningMedian(SMOOTHING);
+RunningMedian EC_smooth = RunningMedian(SMOOTHING);
+RunningMedian N_smooth = RunningMedian(SMOOTHING);
+RunningMedian Ca_smooth = RunningMedian(SMOOTHING);
+RunningMedian K_smooth = RunningMedian(SMOOTHING);
 
 /* --- Setup --- */
 void setup() {
@@ -246,9 +253,11 @@ float test_pH() {
     reading = analogRead(pH_SENSOR_PIN); 
     pH_samples.add(reading);
   } 
-  float val = pH_samples.getAverage();
-  pH_in = double(val); // #! Side effect
-  return val;
+  float avg = pH_samples.getAverage();
+  pH_smooth.add(avg);
+  float med = pH_smooth.getMedian();
+  pH_in = double(med); // #! Side effect
+  return med;
 }
 
 /* --- Test EC --- */
@@ -258,9 +267,11 @@ float test_EC() {
     reading = analogRead(EC_SENSOR_PIN); 
     EC_samples.add(reading);
   } 
-  float val = EC_samples.getAverage();
-  EC_in = double(val); // #! Side effect
-  return val;
+  float avg = EC_samples.getAverage();
+  EC_smooth.add(avg);
+  float med = EC_smooth.getMedian();
+  EC_in = double(med); // #! Side effect
+  return med;
 }
 
 /* --- Test (N) Nitrogen --- */
@@ -269,10 +280,12 @@ float test_N() {
   for(int i = 0; i < SAMPLES; i++) { // read sensor SAMPLE times
     reading = analogRead(N_SENSOR_PIN); 
     N_samples.add(reading);
-  } 
-  float val = N_samples.getAverage();
-  N_in = double(val); // #! Side effect
-  return val;
+  }
+  float avg = N_samples.getAverage();
+  N_smooth.add(avg);
+  float med = N_smooth.getMedian();
+  N_in = double(med); // #! Side effect
+  return med;
 }
 
 /* --- Test (Ca) Calcium --- */
@@ -282,9 +295,11 @@ float test_Ca() {
     reading = analogRead(Ca_SENSOR_PIN); 
     Ca_samples.add(reading);
   } 
-  float val = Ca_samples.getAverage();
-  Ca_in = double(val); // #! Side effect
-  return val;
+  float avg = Ca_samples.getAverage();
+  Ca_smooth.add(avg);
+  float med = Ca_smooth.getMedian();
+  Ca_in = double(med); // #! Side effect
+  return med;
 }
 
 /* --- Test (K) Potassium --- */
@@ -294,9 +309,11 @@ float test_K() {
     reading = analogRead(K_SENSOR_PIN); 
     K_samples.add(reading);
   } 
-  float val = K_samples.getAverage();
-  K_in = double(val); // #! Side effect
-  return val;
+  float avg = K_samples.getAverage();
+  K_smooth.add(avg);
+  float med = K_smooth.getMedian();
+  K_in = double(med); // #! Side effect
+  return med;
 }
 
 /* --- Wait --- */
