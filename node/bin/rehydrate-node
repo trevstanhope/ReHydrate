@@ -1,4 +1,4 @@
 #!/bin/sh
 pkill python # make sure no python server was left orphaned
-iceweasel http://127.0.0.1:8080 & # open webpage
+google-chrome http://127.0.0.1:8080 & # open webpage
 python rehydrate-node.py # start webserver

@@ -68,6 +68,7 @@ class ReHydrate:
         try:
             self.add_log_entry('CHERRYPY', 'Initializing Monitors')
             Monitor(cherrypy.engine, self.new_sample, frequency=self.SAMPLE_INTERVAL).subscribe()
+            Monitor(cherrypy.engine, self.update_graphs, frequency=self.UPDATE_INTERVAL).subscribe()
         except Exception as error:
             self.add_log_entry('CHERRYPY', str(error))
     
