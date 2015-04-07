@@ -9,10 +9,6 @@ body {
   shape-rendering: crispEdges;
 }
 
-.dot {
-  stroke: #FFF;
-}
-
 .tooltip {
   position: absolute;
   width: 200px;
