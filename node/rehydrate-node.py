@@ -68,7 +68,7 @@ class ReHydrate:
         try:
             self.add_log_entry('CHERRYPY', 'Initializing Monitors')
             Monitor(cherrypy.engine, self.new_sample, frequency=self.SAMPLE_INTERVAL).subscribe()
-            Monitor(cherrypy.engine, self.update_graphs, frequency=self.SAMPLE_INTERVAL).subscribe()
+            Monitor(cherrypy.engine, self.update_graphs, frequency=self.UPDATE_INTERVAL).subscribe()
         except Exception as error:
             self.add_log_entry('CHERRYPY', str(error))
     
@@ -278,31 +278,34 @@ class ReHydrate:
     
     ## Calibrate
     def calibrate(self):
-        self.add_log_entry('CALIBRATE', 'Running calibration routine')
-        minutes = self.CALIBRATION_INTERVAL
-        date = datetime.strftime(datetime.now(), "%Y%m")
-        db = self.client[date]
-        col = db['samples']
-        dt = datetime.now() - timedelta(minutes=minutes) # get datetime
-        matches = col.find({'time':{'$gt':dt, '$lt':datetime.now()}})
-        calibration_params = [p for p in self.SENSORS.keys()]
-        calibration_data = []
-        for sample in matches:
-            calibration_point = [sample[p] for p in calibration_params]
-            calibration_data.append(calibration_point)
-        calibration_means = np.mean(calibration_data, axis=0)
-        data = {}
-        for i in range(len(calibration_means)):
-            p = calibration_params[i]
-            data[p] = calibration_means[i]
-            calibration_cmd = "%s%d" % (self.SENSORS[p]['SET_CMD'], calibration_means[i])
-            self.add_log_entry("SET", "Setting %s with: %s" % (p, calibration_cmd))
-            self.arduino.write(calibration_cmd)
+        try:
+            self.add_log_entry('CALIBRATE', 'Running calibration routine')
+            minutes = self.CALIBRATION_INTERVAL
+            date = datetime.strftime(datetime.now(), "%Y%m")
+            db = self.client[date]
+            col = db['samples']
+            dt = datetime.now() - timedelta(minutes=minutes) # get datetime
+            matches = col.find({'time':{'$gt':dt, '$lt':datetime.now()}})
+            calibration_params = [p for p in self.SENSORS.keys()]
+            calibration_data = []
+            for sample in matches:
+                calibration_point = [sample[p] for p in calibration_params]
+                calibration_data.append(calibration_point)
+            calibration_means = np.mean(calibration_data, axis=0)
+            data = {}
+            for i in range(len(calibration_means)):
+                p = calibration_params[i]
+                data[p] = calibration_means[i]
+                calibration_cmd = "%s%d" % (self.SENSORS[p]['SET_CMD'], calibration_means[i])
+                self.add_log_entry("SET", "Setting %s with: %s" % (p, calibration_cmd))
+                self.arduino.write(calibration_cmd)
 
-        # Generate calibration JSON
-        with open('data/calibration.json', 'w') as jsonfile:
-            data = self.calculate_millivolt(data)
-            jsonfile.write(json.dumps(data, indent=True))
+            # Generate calibration JSON
+            with open('data/calibration.json', 'w') as jsonfile:
+                data = self.calculate_millivolt(data)
+                jsonfile.write(json.dumps(data, indent=True))
+        except Exception as error:
+            print str(error)
             
     ## Shutdown
     def shutdown(self):
